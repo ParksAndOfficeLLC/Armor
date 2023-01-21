@@ -2,17 +2,17 @@ user = User.where(email: "test@example.com").first_or_create(password: "password
 
 products_seeds = [
   {
-    name: "",
+    name: "shirt",
     price: 10.22,
     cost: 8.55
   },
   {
-    name: "",
+    name: "hat",
     price: 8.72,
     cost: 6.55
   },
   {
-    name: "",
+    name: "hoodie",
     price: 20.22,
     cost: 15.53
   }
