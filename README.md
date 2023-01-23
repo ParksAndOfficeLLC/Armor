@@ -66,8 +66,21 @@ In app/models/ user & order & product, added below associations appropriately:
 Server up and running on local host ;)
 
 ************************************************************************************************
+Created, Crud method Read for index (Rspec testing)
+Created, Crud method Create - created orders and products with private perams. (Rspec testing)
+Created, devise for login 
+
+*** Things to look into***
+  has_and_belongs_to_many :products
+  (we couldnt decide which one was right) {Location: Models/User.rb} 
+  has_many :products, through: :orders
+
+
+
 
 Things you may want to cover:
+
+
 
 * Ruby version
 
