@@ -437,3 +437,44 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 3.3ms | Allocations: 17615)
 
 
+Started GET "/products" for ::1 at 2023-01-23 15:23:00 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 20765)
+
+
+Started GET "/products" for ::1 at 2023-01-23 15:23:04 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 756)
+
+
+Started GET "/products" for ::1 at 2023-01-23 15:23:07 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 755)
+
+
+Started GET "/" for ::1 at 2023-01-23 15:23:14 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1256)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.19
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning package.json: No license field
+warning package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 3949.2ms | Allocations: 146664)
+Completed 200 OK in 3968ms (Views: 3954.3ms | ActiveRecord: 0.0ms | Allocations: 150267)
+
+
