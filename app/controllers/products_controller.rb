@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
         render json: product
         else render json: product.errors, status:422
         end
-    
+    end
     private 
     def product_params
         params.require(:product).permit(:name, :price, :cost)

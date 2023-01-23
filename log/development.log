@@ -403,3 +403,37 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 930)
 
 
+Started GET "/" for ::1 at 2023-01-23 15:03:27 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1145)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.19
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning package.json: No license field
+warning package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 3883.2ms | Allocations: 144221)
+Completed 200 OK in 3905ms (Views: 3886.9ms | ActiveRecord: 0.0ms | Allocations: 150945)
+
+
+Started GET "/products" for ::1 at 2023-01-23 15:04:24 -0800
+  
+SyntaxError (/Users/learnacademy/Desktop/Armor/app/controllers/products_controller.rb:17: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/products_controller.rb:17: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/products_controller.rb:17: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/products_controller.rb:17: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/products" for ::1 at 2023-01-23 15:05:34 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (3.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 3.3ms | Allocations: 17615)
+
+
