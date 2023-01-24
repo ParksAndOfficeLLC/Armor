@@ -403,3 +403,44 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 930)
 
 
+Started GET "/" for ::1 at 2023-01-23 16:26:32 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 5033)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.19
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning package.json: No license field
+warning package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 4010.8ms | Allocations: 150174)
+Completed 200 OK in 4021ms (Views: 4013.7ms | ActiveRecord: 0.0ms | Allocations: 156898)
+
+
+Started GET "/products" for ::1 at 2023-01-23 16:26:43 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 3.9ms | ActiveRecord: 1.2ms | Allocations: 17645)
+
+
+Started GET "/orders" for ::1 at 2023-01-23 16:26:54 -0800
+  
+SyntaxError (/Users/learnacademy/Desktop/Armor/app/controllers/orders_controller.rb:20: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/orders_controller.rb:20: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/orders_controller.rb:20: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/orders_controller.rb:20: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/orders" for ::1 at 2023-01-23 16:28:17 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (3.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 1.5ms | ActiveRecord: 3.1ms | Allocations: 17474)
+
+
