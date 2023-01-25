@@ -37,4 +37,23 @@ RSpec.describe "Products", type: :request do
       expect(products.length).to eq 3
     end
   end
+
+  describe "PATCH /update" do
+    it "updates a product" do
+      product = Product.create(name: 'shirt', price: 10.22, cost: 8.55, user_id: 1)
+      product_params = {
+        products:
+          {
+            name: 'T-Shirt',
+            price: 10.22,
+            cost: 8.55,
+            user_id: 1
+          }
+      }
+      patch "/products/#{product.id}", params: product_params
+      updated_product = Product.find(product.id)
+      expect(response).to have_http_status(200)
+      expect(updated_product.name).to eq 'T-Shirt'
+    end
+  end
 end
