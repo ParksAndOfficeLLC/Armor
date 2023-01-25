@@ -6,6 +6,7 @@ RSpec.describe "Products", type: :request do
    
   it "gets a list of products" do
    get '/products'
+   p response.body
    expect(response).to have_http_status(200)
     end
   end
