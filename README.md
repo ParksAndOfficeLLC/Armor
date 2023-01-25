@@ -1,5 +1,9 @@
 README Park5 & 0ffice Store app
+*******************************************************************
+Star line between each day - this will be filled out like the duty log book in the military! 
+directions each day will be seperated by stars and all entries will start with the date. Followed by the days activities and descrepencies. 
 
+*******************************************************************
 Below documentation were the steps taken to get the
 application up and running.
 
@@ -62,27 +66,39 @@ In app/models/ user & order & product, added below associations appropriately:
     has_and_belongs_to_many :users
     has_and_belongs_to_many :orders
     has_and_belongs_to_many :products
+    *********************************************************************************
+    (Monday, January 23rd)
+merge issues
+Cache cache files removed and added to git ignore on main. 
+not on branch took the whole day. Poopy day 
 
+ 
 Server up and running on local host ;)
 
 ************************************************************************************************
+Created, Crud method Read for index (Rspec testing)
+Created, Crud method Create - created orders and products with private perams. (Rspec testing)
+Created, devise for login 
+*******************************************************************************************
+migrated the products table to include user_id 
+changed assosciations; to
 
-Things you may want to cover:
+class Product < ApplicationRecord
+  has_many :orders
+  has_many :users, through: :orders
+end
 
-* Ruby version
+class Order < ApplicationRecord
+  belongs_to :product
+  belongs_to :user
+end
 
-* System dependencies
+class User < ApplicationRecord
+  has_many :orders
+  has_many :products, through: :orders
+end
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*** Things to look into***
+  has_and_belongs_to_many :products
+  (we couldnt decide which one was right) {Location: Models/User.rb} 
+  has_many :products, through: :orders
