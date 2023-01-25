@@ -79,6 +79,24 @@ Server up and running on local host ;)
 Created, Crud method Read for index (Rspec testing)
 Created, Crud method Create - created orders and products with private perams. (Rspec testing)
 Created, devise for login 
+*******************************************************************************************
+migrated the products table to include user_id 
+changed assosciations; to
+
+class Product < ApplicationRecord
+  has_many :orders
+  has_many :users, through: :orders
+end
+
+class Order < ApplicationRecord
+  belongs_to :product
+  belongs_to :user
+end
+
+class User < ApplicationRecord
+  has_many :orders
+  has_many :products, through: :orders
+end
 
 *** Things to look into***
   has_and_belongs_to_many :products
