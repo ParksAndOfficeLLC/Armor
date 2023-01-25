@@ -32,4 +32,23 @@ RSpec.describe "Orders", type: :request do
         # expect(order.product_id).to eq 1
     end  
   end
+
+  describe "PATCH /update" do
+    it "updates an order" do
+      orders = Order.create(user_id: 1, product_id: 1)
+      orders_params = {
+        orders:
+          {
+            name: 'T-Shirt',
+            price: 10.22,
+            cost: 8.55,
+            user_id: 1
+          }
+      }
+      patch "/orders/#{order.id}", params: orders_params
+      updated_orders = Order.find(order.id)
+      expect(response).to have_http_status(200)
+      expect(updated_order.user_id:).to eq 2
+    end
+  end
 end
