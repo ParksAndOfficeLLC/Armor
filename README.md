@@ -80,23 +80,31 @@ Created, Crud method Read for index (Rspec testing)
 Created, Crud method Create - created orders and products with private perams. (Rspec testing)
 Created, devise for login 
 *******************************************************************************************
-migrated the products table to include user_id 
-changed assosciations; to
+migrated the products table to include user_id and order_id
+changed assosciations; to the below:
 
 class Product < ApplicationRecord
-  has_many :orders
-  has_many :users, through: :orders
-end
-
-class Order < ApplicationRecord
-  belongs_to :product
-  belongs_to :user
+has_many :users, through: :orders 
+has_many :orders
 end
 
 class User < ApplicationRecord
-  has_many :orders
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   has_many :products, through: :orders
+  has_many :orders
 end
+
+class Order < ApplicationRecord
+belongs_to :user
+belongs_to :product
+end 
+
+Changing these associations and migrating the products table to include order_id fixed 7 bugs, leaving only 2 failing tests that only required methods and tests to be updated to reflect the new assoc and migration to be fixed.
+*******************************************************************
+
+
+
 
 *** Things to look into***
   has_and_belongs_to_many :products

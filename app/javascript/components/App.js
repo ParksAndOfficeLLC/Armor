@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import PropTypes from "prop-types"
 import ProductNew from "./pages/ProductNew"
 import OrderNew from "./pages/OrderNew"
+import ProductIndex from './pages/ProductIndex'
 
 // class App extends React.Component {
 //   render () {
@@ -77,6 +78,10 @@ const App = (props) => {
           {/* <Route exact path="/" element={<Home {...props} />} /> */}
           <Route path="/productsnew" element={<ProductNew createProduct={createProduct} {...props} />} />
           <Route path="/ordersnew" element={<OrderNew createOrder={createOrder} {...props} />} />
+          <Route
+          path="/productsindex"
+          element={<ProductIndex products={products} />}
+        />
         </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
