@@ -2279,3 +2279,1483 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 47ms (Views: 7.4ms | ActiveRecord: 23.2ms | Allocations: 23605)
 
 
+Started GET "/" for ::1 at 2023-01-27 09:26:38 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1427)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.19
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning package.json: No license field
+warning package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 948.4ms | Allocations: 67597)
+Completed 200 OK in 956ms (Views: 951.0ms | ActiveRecord: 0.0ms | Allocations: 73157)
+
+
+Started GET "/" for ::1 at 2023-01-27 09:28:50 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1423)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 89.2ms | Allocations: 38421)
+Completed 200 OK in 96ms (Views: 91.4ms | ActiveRecord: 0.0ms | Allocations: 43982)
+
+
+Started GET "/products" for ::1 at 2023-01-27 09:29:02 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (3.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 46ms (Views: 15.3ms | ActiveRecord: 21.8ms | Allocations: 20907)
+
+
+Started GET "/products/new" for ::1 at 2023-01-27 09:29:08 -0800
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for ProductsController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/productsnew" for ::1 at 2023-01-27 09:29:48 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 667)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 7176)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 7534)
+
+
+Started GET "/ordernew" for ::1 at 2023-01-27 09:30:03 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordernew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 660)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 7168)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 7525)
+
+
+Started GET "/ordernew" for ::1 at 2023-01-27 09:30:11 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordernew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 672)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 7176)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.0ms | Allocations: 7529)
+
+
+Started GET "/ordernew" for ::1 at 2023-01-27 09:30:12 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordernew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 668)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 7174)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 7528)
+
+
+Started GET "/" for ::1 at 2023-01-27 09:38:41 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1433)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.5ms | Allocations: 38495)
+Completed 200 OK in 103ms (Views: 97.5ms | ActiveRecord: 0.0ms | Allocations: 44056)
+
+
+Started GET "/" for ::1 at 2023-01-27 09:38:46 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 664)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 7154)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 7512)
+
+
+Started GET "/" for ::1 at 2023-01-27 09:38:50 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 674)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 7165)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 7522)
+
+
+Started GET "/" for ::1 at 2023-01-27 09:43:22 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1417)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 102.0ms | Allocations: 38556)
+Completed 200 OK in 110ms (Views: 104.4ms | ActiveRecord: 0.0ms | Allocations: 44117)
+
+
+Started GET "/" for ::1 at 2023-01-27 09:43:22 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 682)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 7172)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 7530)
+
+
+Started GET "/productsnew" for ::1 at 2023-01-27 09:43:32 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 670)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 7179)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 7536)
+
+
+Started GET "/productsnew" for ::1 at 2023-01-27 09:43:34 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 666)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 7174)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 7531)
+
+
+Started GET "/productsnew" for ::1 at 2023-01-27 09:44:26 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 844)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.19
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning package.json: No license field
+warning package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 806.4ms | Allocations: 9004)
+Completed 200 OK in 808ms (Views: 807.4ms | Allocations: 10094)
+
+
+Started GET "/products" for ::1 at 2023-01-27 09:44:53 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 6.6ms | ActiveRecord: 7.4ms | Allocations: 23624)
+
+
+Started GET "/products" for ::1 at 2023-01-27 09:45:01 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 1.3ms | Allocations: 1094)
+
+
+Started GET "/productsnew" for ::1 at 2023-01-27 09:45:10 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 1388)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 110.5ms | Allocations: 54026)
+Completed 200 OK in 123ms (Views: 116.1ms | ActiveRecord: 0.0ms | Allocations: 56881)
+
+
+Started GET "/products" for ::1 at 2023-01-27 09:54:18 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 8.7ms | Allocations: 8734)
+
+
+Started GET "/orders" for ::1 at 2023-01-27 09:54:30 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (1.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 38ms (Views: 14.7ms | ActiveRecord: 11.3ms | Allocations: 17884)
+
+
+Started GET "/ordersnew" for ::1 at 2023-01-27 09:54:47 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordersnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 721)
+[Webpacker] Compiling...
+Started GET "/ordersnew" for ::1 at 2023-01-27 09:54:50 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordersnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 678)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 3dcdac221d7090316592
+Version: webpack 4.46.0
+Time: 1237ms
+Built at: 01/27/2023 9:54:52 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-5e7f5bddfb4db5b9493a.js  2.65 MiB       application  [emitted] [immutable]  application
+     js/application-5e7f5bddfb4db5b9493a.js.map  2.78 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-b8d01217a252b5267503.js  2.65 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-b8d01217a252b5267503.js.map  2.78 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-5e7f5bddfb4db5b9493a.js js/application-5e7f5bddfb4db5b9493a.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-b8d01217a252b5267503.js js/server_rendering-b8d01217a252b5267503.js.map
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 132 hidden modules
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js 17:40-48
+"export 'default' (imported as 'OrderNew') was not found in './OrderNew'
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/App.js 123:46-54
+"export 'default' (imported as 'OrderNew') was not found in './pages/OrderNew'
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/OrderNew.test.js 4:0-56 10:4-10 25:11-17 28:22-28 30:25-31
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/pages/ProductNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/ProductNew.test.js 4:0-56 10:4-10 25:11-17 28:19-25 30:20-26 32:19-25
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+
+warning package.json: No license field
+
+[Webpacker] Compilation failed:
+Hash: 3dcdac221d7090316592
+Version: webpack 4.46.0
+Time: 3398ms
+Built at: 01/27/2023 9:54:52 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-5e7f5bddfb4db5b9493a.js  2.65 MiB       application  [emitted] [immutable]  application
+     js/application-5e7f5bddfb4db5b9493a.js.map  2.78 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-b8d01217a252b5267503.js  2.65 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-b8d01217a252b5267503.js.map  2.78 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-5e7f5bddfb4db5b9493a.js js/application-5e7f5bddfb4db5b9493a.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-b8d01217a252b5267503.js js/server_rendering-b8d01217a252b5267503.js.map
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 132 hidden modules
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js 17:40-48
+"export 'default' (imported as 'OrderNew') was not found in './OrderNew'
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/App.js 123:46-54
+"export 'default' (imported as 'OrderNew') was not found in './pages/OrderNew'
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/OrderNew.test.js 4:0-56 10:4-10 25:11-17 28:22-28 30:25-31
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/pages/ProductNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/ProductNew.test.js 4:0-56 10:4-10 25:11-17 28:19-25 30:20-26 32:19-25
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+
+warning package.json: No license field
+
+  Rendered layout layouts/application.html.erb (Duration: 2195.1ms | Allocations: 9510)
+Completed 200 OK in 2197ms (Views: 2195.9ms | ActiveRecord: 0.0ms | Allocations: 9863)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 4993.8ms | Allocations: 19352)
+Completed 200 OK in 4997ms (Views: 4995.7ms | ActiveRecord: 0.0ms | Allocations: 20131)
+
+
+Started GET "/products" for ::1 at 2023-01-27 09:54:52 -0800
+Started GET "/orders" for ::1 at 2023-01-27 09:54:52 -0800
+Processing by ProductsController#index as */*
+Processing by OrdersController#index as */*
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 1.8ms | Allocations: 2634)
+
+
+  [1m[36mOrder Load (0.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 11.7ms | ActiveRecord: 6.8ms | Allocations: 4862)
+
+
+Started GET "/orders" for ::1 at 2023-01-27 09:54:59 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 848)
+
+
+Started GET "/" for ::1 at 2023-01-27 09:55:01 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 670)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 7157)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 7510)
+
+
+Started GET "/products" for ::1 at 2023-01-27 09:55:01 -0800
+Started GET "/orders" for ::1 at 2023-01-27 09:55:01 -0800
+Processing by ProductsController#index as */*
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (4.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 13.9ms | ActiveRecord: 4.8ms | Allocations: 900)
+
+
+  [1m[36mProduct Load (7.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 15.0ms | ActiveRecord: 7.9ms | Allocations: 2745)
+
+
+Started GET "/" for ::1 at 2023-01-27 09:55:04 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 674)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 7160)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 7513)
+
+
+Started GET "/products" for ::1 at 2023-01-27 09:55:04 -0800
+Started GET "/orders" for ::1 at 2023-01-27 09:55:04 -0800
+Processing by ProductsController#index as */*
+Processing by OrdersController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1507)
+
+
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1995)
+
+
+Started GET "/productsnew" for ::1 at 2023-01-27 09:55:20 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 664)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 7168)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 7521)
+
+
+Started GET "/products" for ::1 at 2023-01-27 09:55:21 -0800
+Started GET "/orders" for ::1 at 2023-01-27 09:55:21 -0800
+Processing by ProductsController#index as */*
+Processing by OrdersController#index as */*
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.1ms | Allocations: 1564)
+
+
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1976)
+
+
+Started GET "/products" for ::1 at 2023-01-27 09:58:40 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 17.0ms | Allocations: 23751)
+
+
+Started GET "/products/new" for ::1 at 2023-01-27 09:58:53 -0800
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for ProductsController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/productsnew" for ::1 at 2023-01-27 10:02:20 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 837)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.7ms | Allocations: 7650)
+Completed 200 OK in 63ms (Views: 59.5ms | ActiveRecord: 0.0ms | Allocations: 8691)
+
+
+Started GET "/products" for ::1 at 2023-01-27 10:02:20 -0800
+Processing by ProductsController#index as */*
+Started GET "/orders" for ::1 at 2023-01-27 10:02:20 -0800
+Processing by OrdersController#index as */*
+  [1m[36mProduct Load (5.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 83ms (Views: 77.3ms | ActiveRecord: 5.3ms | Allocations: 1095)
+
+
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 62ms (Views: 55.8ms | ActiveRecord: 9.3ms | Allocations: 3675)
+
+
+Started GET "/productsnew" for ::1 at 2023-01-27 10:02:58 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 717)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 81f1218252238015e816
+Version: webpack 4.46.0
+Time: 1148ms
+Built at: 01/27/2023 10:03:01 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-b92e1e5d73b745d30ee5.js  2.65 MiB       application  [emitted] [immutable]  application
+     js/application-b92e1e5d73b745d30ee5.js.map  2.78 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-e3369ba611263ee540e2.js  2.65 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-e3369ba611263ee540e2.js.map  2.78 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-b92e1e5d73b745d30ee5.js js/application-b92e1e5d73b745d30ee5.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-e3369ba611263ee540e2.js js/server_rendering-e3369ba611263ee540e2.js.map
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 132 hidden modules
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js 17:40-48
+"export 'default' (imported as 'OrderNew') was not found in './OrderNew'
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/App.js 123:46-54
+"export 'default' (imported as 'OrderNew') was not found in './pages/OrderNew'
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/OrderNew.test.js 4:0-56 10:4-10 25:11-17 28:22-28 30:25-31
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/pages/ProductNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/ProductNew.test.js 4:0-56 10:4-10 25:11-17 28:19-25 30:20-26 32:19-25
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+
+warning package.json: No license field
+
+  Rendered layout layouts/application.html.erb (Duration: 2438.1ms | Allocations: 8558)
+Completed 200 OK in 2441ms (Views: 2439.9ms | ActiveRecord: 0.0ms | Allocations: 9340)
+
+
+Started GET "/ordernew" for ::1 at 2023-01-27 10:03:26 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordernew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 715)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 7244)
+Completed 200 OK in 12ms (Views: 11.1ms | Allocations: 8023)
+
+
+Started GET "/orders" for ::1 at 2023-01-27 10:03:34 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 70ms (Views: 61.4ms | ActiveRecord: 18.8ms | Allocations: 22506)
+
+
+Started GET "/ordersnew" for ::1 at 2023-01-27 10:03:55 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordersnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 725)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 20c25127131d06d6bb1f
+Version: webpack 4.46.0
+Time: 980ms
+Built at: 01/27/2023 10:03:57 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-3b830dce9a021e276c5a.js  2.65 MiB       application  [emitted] [immutable]  application
+     js/application-3b830dce9a021e276c5a.js.map  2.78 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-df9f2d6b479989955186.js  2.65 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-df9f2d6b479989955186.js.map  2.78 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-3b830dce9a021e276c5a.js js/application-3b830dce9a021e276c5a.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-df9f2d6b479989955186.js js/server_rendering-df9f2d6b479989955186.js.map
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 132 hidden modules
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js 17:40-48
+"export 'default' (imported as 'OrderNew') was not found in './OrderNew'
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/components/App.js 123:46-54
+"export 'default' (imported as 'OrderNew') was not found in './pages/OrderNew'
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/OrderNew.test.js 4:0-56 10:4-10 25:11-17 28:22-28 30:25-31
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/components/pages/ProductNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/ProductNew.test.js 4:0-56 10:4-10 25:11-17 28:19-25 30:20-26 32:19-25
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+
+warning package.json: No license field
+
+  Rendered layout layouts/application.html.erb (Duration: 1962.7ms | Allocations: 8773)
+Completed 200 OK in 1965ms (Views: 1964.1ms | ActiveRecord: 0.0ms | Allocations: 9557)
+
+
+Started GET "/productsnew" for ::1 at 2023-01-27 10:04:12 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 666)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 7170)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 7523)
+
+
+Started GET "/productsnew" for ::1 at 2023-01-27 10:04:15 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 666)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 7174)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 7531)
+
+
+Started GET "/productsnew" for ::1 at 2023-01-27 10:05:36 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 721)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: ba8071b7d79ab1b24f7c
+Version: webpack 4.46.0
+Time: 909ms
+Built at: 01/27/2023 10:05:38 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-16c5ecd419aec922c69a.js  2.65 MiB       application  [emitted] [immutable]  application
+     js/application-16c5ecd419aec922c69a.js.map  2.78 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-06bd6d42c39f8555b941.js  2.65 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-06bd6d42c39f8555b941.js.map  2.78 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-16c5ecd419aec922c69a.js js/application-16c5ecd419aec922c69a.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-06bd6d42c39f8555b941.js js/server_rendering-06bd6d42c39f8555b941.js.map
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 132 hidden modules
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js 17:40-48
+"export 'default' (imported as 'OrderNew') was not found in './OrderNew'
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/components/App.js 124:46-54
+"export 'default' (imported as 'OrderNew') was not found in './pages/OrderNew'
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/OrderNew.test.js 4:0-56 10:4-10 25:11-17 28:22-28 30:25-31
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/components/pages/ProductNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/ProductNew.test.js 4:0-56 10:4-10 25:11-17 28:19-25 30:20-26 32:19-25
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+
+warning package.json: No license field
+
+  Rendered layout layouts/application.html.erb (Duration: 1921.2ms | Allocations: 8561)
+Completed 200 OK in 1923ms (Views: 1922.0ms | ActiveRecord: 0.0ms | Allocations: 9343)
+
+
+Started GET "/productsnew" for ::1 at 2023-01-27 10:10:57 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 699)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 95cce2d7a6862f37d589
+Version: webpack 4.46.0
+Time: 957ms
+Built at: 01/27/2023 10:10:59 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-4dda926fa99a030a1c14.js  2.65 MiB       application  [emitted] [immutable]  application
+     js/application-4dda926fa99a030a1c14.js.map  2.78 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-10c17bd951b0df642671.js  2.65 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-10c17bd951b0df642671.js.map  2.78 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-4dda926fa99a030a1c14.js js/application-4dda926fa99a030a1c14.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-10c17bd951b0df642671.js js/server_rendering-10c17bd951b0df642671.js.map
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 132 hidden modules
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js 17:40-48
+"export 'default' (imported as 'OrderNew') was not found in './OrderNew'
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/components/App.js 123:46-54
+"export 'default' (imported as 'OrderNew') was not found in './pages/OrderNew'
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/OrderNew.test.js 4:0-56 10:4-10 25:11-17 28:22-28 30:25-31
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/components/pages/ProductNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/ProductNew.test.js 4:0-56 10:4-10 25:11-17 28:19-25 30:20-26 32:19-25
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+
+warning package.json: No license field
+
+  Rendered layout layouts/application.html.erb (Duration: 1925.9ms | Allocations: 8553)
+Completed 200 OK in 1927ms (Views: 1926.5ms | Allocations: 9334)
+
+
+Started GET "/products" for ::1 at 2023-01-27 10:10:59 -0800
+Started GET "/orders" for ::1 at 2023-01-27 10:10:59 -0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 71ms (Views: 66.0ms | ActiveRecord: 40.4ms | Allocations: 9061)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 16.5ms | Allocations: 8085)
+
+
+Started GET "/ordersnew" for ::1 at 2023-01-27 10:11:12 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordersnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 729)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 7296)
+Completed 200 OK in 40ms (Views: 28.9ms | ActiveRecord: 0.0ms | Allocations: 8073)
+
+
+Started GET "/ordersnew" for ::1 at 2023-01-27 10:11:17 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordersnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 666)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 7170)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 7523)
+
+
+Started GET "/ordernew" for ::1 at 2023-01-27 10:11:24 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordernew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 668)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 7172)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 7525)
+
+
+Started GET "/products" for ::1 at 2023-01-27 10:11:24 -0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (18.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Started GET "/orders" for ::1 at 2023-01-27 10:11:24 -0800
+Completed 200 OK in 42ms (Views: 14.4ms | ActiveRecord: 24.1ms | Allocations: 19083)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 52ms (Views: 47.5ms | ActiveRecord: 15.2ms | Allocations: 20813)
+
+
+Started GET "/ordersnew" for ::1 at 2023-01-27 10:11:36 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordersnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 725)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 7295)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.0ms | Allocations: 8074)
+
+
+Started GET "/ordersnew" for ::1 at 2023-01-27 10:20:46 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordersnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 711)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 6d776579b7c437b0e3b6
+Version: webpack 4.46.0
+Time: 967ms
+Built at: 01/27/2023 10:20:48 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-3434056c2270d4cc73bc.js  2.65 MiB       application  [emitted] [immutable]  application
+     js/application-3434056c2270d4cc73bc.js.map  2.78 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-f06730615182dccc6467.js  2.65 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-f06730615182dccc6467.js.map  2.78 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-3434056c2270d4cc73bc.js js/application-3434056c2270d4cc73bc.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-f06730615182dccc6467.js js/server_rendering-f06730615182dccc6467.js.map
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 132 hidden modules
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/OrderNew.test.js 4:0-56 10:4-10 25:11-17 28:22-28 30:25-31
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/components/pages/ProductNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/ProductNew.test.js 4:0-56 10:4-10 25:11-17 28:19-25 30:20-26 32:19-25
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+
+warning package.json: No license field
+
+  Rendered layout layouts/application.html.erb (Duration: 1995.5ms | Allocations: 8551)
+Completed 200 OK in 1998ms (Views: 1997.0ms | Allocations: 9332)
+
+
+Started GET "/ordersnew" for ::1 at 2023-01-27 10:23:28 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordersnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 713)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: e951495c985fbad3dd63
+Version: webpack 4.46.0
+Time: 947ms
+Built at: 01/27/2023 10:23:30 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-977c5f414ff354126cbd.js  2.65 MiB       application  [emitted] [immutable]  application
+     js/application-977c5f414ff354126cbd.js.map  2.78 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-307076c57eba54c5e1e5.js  2.65 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-307076c57eba54c5e1e5.js.map  2.78 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-977c5f414ff354126cbd.js js/application-977c5f414ff354126cbd.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-307076c57eba54c5e1e5.js js/server_rendering-307076c57eba54c5e1e5.js.map
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 132 hidden modules
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/OrderNew.test.js 4:0-56 10:4-10 25:11-17 28:22-28 30:25-31
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/components/pages/ProductNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/ProductNew.test.js 4:0-56 10:4-10 25:11-17 28:19-25 30:20-26 32:19-25
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+
+warning package.json: No license field
+
+  Rendered layout layouts/application.html.erb (Duration: 1993.6ms | Allocations: 8708)
+Completed 200 OK in 1997ms (Views: 1994.9ms | Allocations: 9491)
+
+
+Started GET "/ordersnew" for ::1 at 2023-01-27 10:24:05 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordersnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 707)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: bd720c059e2f1c78d9a8
+Version: webpack 4.46.0
+Time: 937ms
+Built at: 01/27/2023 10:24:07 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-cd15f1bbf4c8d3a8cb87.js  2.65 MiB       application  [emitted] [immutable]  application
+     js/application-cd15f1bbf4c8d3a8cb87.js.map  2.78 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-5b2b438d72c6f721ea56.js  2.65 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-5b2b438d72c6f721ea56.js.map  2.78 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-cd15f1bbf4c8d3a8cb87.js js/application-cd15f1bbf4c8d3a8cb87.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-5b2b438d72c6f721ea56.js js/server_rendering-5b2b438d72c6f721ea56.js.map
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 132 hidden modules
+
+ERROR in ./app/javascript/components/pages/OrderNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/OrderNew.test.js 4:0-56 10:4-10 25:11-17 28:22-28 30:25-31
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/components/pages/ProductNew.test.js
+Module not found: Error: Can't resolve '@testing-library/react' in '/Users/learnacademy/Desktop/Armor/app/javascript/components/pages'
+ @ ./app/javascript/components/pages/ProductNew.test.js 4:0-56 10:4-10 25:11-17 28:19-25 30:20-26 32:19-25
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+
+warning package.json: No license field
+
+  Rendered layout layouts/application.html.erb (Duration: 1939.3ms | Allocations: 8719)
+Completed 200 OK in 1941ms (Views: 1940.2ms | Allocations: 9500)
+
+
+Started GET "/products" for ::1 at 2023-01-27 10:24:07 -0800
+Started GET "/orders" for ::1 at 2023-01-27 10:24:07 -0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 59ms (Views: 55.0ms | ActiveRecord: 20.1ms | Allocations: 8709)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 18.7ms | Allocations: 8036)
+
+
+Started GET "/ordersnew" for ::1 at 2023-01-27 11:11:24 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordersnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 717)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/Armor/public/packs
+[Webpacker] warning package.json: No license field
+
+[Webpacker] Hash: de4437e1795ad650ea4f
+Version: webpack 4.46.0
+Time: 2745ms
+Built at: 01/27/2023 11:11:28 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-138c4b307d6736d8901d.js  3.67 MiB       application  [emitted] [immutable]  application
+     js/application-138c4b307d6736d8901d.js.map  3.76 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-0c75e4ffda420fb03e53.js  3.67 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-0c75e4ffda420fb03e53.js.map  3.76 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-138c4b307d6736d8901d.js js/application-138c4b307d6736d8901d.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-0c75e4ffda420fb03e53.js js/server_rendering-0c75e4ffda420fb03e53.js.map
+[0] ./util.inspect (ignored) 15 bytes {application} {server_rendering} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 633 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 513 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 3864.0ms | Allocations: 8650)
+Completed 200 OK in 3866ms (Views: 3864.7ms | Allocations: 9432)
+
+
+Started GET "/products" for ::1 at 2023-01-27 11:11:28 -0800
+Processing by ProductsController#index as */*
+Started GET "/orders" for ::1 at 2023-01-27 11:11:28 -0800
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 111ms (Views: 106.9ms | ActiveRecord: 56.2ms | Allocations: 7772)
+
+
+Completed 200 OK in 284ms (Views: 280.7ms | ActiveRecord: 75.8ms | Allocations: 8617)
+
+
+Started GET "/ordersnew" for ::1 at 2023-01-27 11:41:23 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordersnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 711)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/Armor/public/packs
+[Webpacker] warning package.json: No license field
+
+[Webpacker] Hash: 5ef03ecf87a64c95105f
+Version: webpack 4.46.0
+Time: 1348ms
+Built at: 01/27/2023 11:41:25 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-bc2a98fbbe6c1af4f5fe.js  3.67 MiB       application  [emitted] [immutable]  application
+     js/application-bc2a98fbbe6c1af4f5fe.js.map  3.76 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-db4eace0b5d90d54aa27.js  3.67 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-db4eace0b5d90d54aa27.js.map  3.76 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-bc2a98fbbe6c1af4f5fe.js js/application-bc2a98fbbe6c1af4f5fe.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-db4eace0b5d90d54aa27.js js/server_rendering-db4eace0b5d90d54aa27.js.map
+[0] ./util.inspect (ignored) 15 bytes {application} {server_rendering} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 633 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 513 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2456.8ms | Allocations: 8634)
+Completed 200 OK in 2461ms (Views: 2459.5ms | Allocations: 9414)
+
+
+Started GET "/products" for ::1 at 2023-01-27 11:41:26 -0800
+Started GET "/orders" for ::1 at 2023-01-27 11:41:26 -0800
+Processing by ProductsController#index as */*
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 109ms (Views: 104.9ms | ActiveRecord: 71.1ms | Allocations: 7772)
+
+
+Completed 200 OK in 243ms (Views: 239.0ms | ActiveRecord: 68.5ms | Allocations: 8731)
+
+
+Started GET "/productnew" for ::1 at 2023-01-27 11:41:34 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 669)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 7173)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 7526)
+
+
+Started GET "/products" for ::1 at 2023-01-27 11:41:34 -0800
+Started GET "/orders" for ::1 at 2023-01-27 11:41:34 -0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1083)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.5ms | Allocations: 852)
+
+
+Started GET "/productsnew" for ::1 at 2023-01-27 11:41:48 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"productsnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 713)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.8ms | Allocations: 7286)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.0ms | Allocations: 8063)
+
+
+Started GET "/products" for ::1 at 2023-01-27 11:41:48 -0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 22.3ms | ActiveRecord: 0.5ms | Allocations: 1083)
+
+
+Started GET "/orders" for ::1 at 2023-01-27 11:41:48 -0800
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 21.9ms | ActiveRecord: 9.5ms | Allocations: 7840)
+
+
+Started GET "/" for ::1 at 2023-01-27 11:42:10 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.2ms | Allocations: 7357)
+Completed 200 OK in 54ms (Views: 50.9ms | ActiveRecord: 0.0ms | Allocations: 8135)
+
+
+Started GET "/products" for ::1 at 2023-01-27 11:42:10 -0800
+Started GET "/orders" for ::1 at 2023-01-27 11:42:10 -0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 1.4ms | Allocations: 5731)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 9.0ms | Allocations: 7779)
+
+
+Started GET "/" for ::1 at 2023-01-27 11:42:25 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 721)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/Armor/public/packs
+[Webpacker] warning package.json: No license field
+
+[Webpacker] Hash: 0b1fe7dbee1c01b2e1dc
+Version: webpack 4.46.0
+Time: 1404ms
+Built at: 01/27/2023 11:42:28 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-b6a0a144be7bb2b6eb5d.js  3.67 MiB       application  [emitted] [immutable]  application
+     js/application-b6a0a144be7bb2b6eb5d.js.map  3.76 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-4f19766cf10e646b1ded.js  3.67 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-4f19766cf10e646b1ded.js.map  3.76 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-b6a0a144be7bb2b6eb5d.js js/application-b6a0a144be7bb2b6eb5d.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-4f19766cf10e646b1ded.js js/server_rendering-4f19766cf10e646b1ded.js.map
+[0] ./util.inspect (ignored) 15 bytes {application} {server_rendering} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 633 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 513 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2399.5ms | Allocations: 8662)
+Completed 200 OK in 2401ms (Views: 2400.8ms | ActiveRecord: 0.0ms | Allocations: 9444)
+
+
+Started GET "/products" for ::1 at 2023-01-27 11:45:05 -0800
+Started GET "/orders" for ::1 at 2023-01-27 11:45:05 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+Processing by OrdersController#index as */*
+  [1m[36mProduct Load (6.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 69ms (Views: 15.8ms | ActiveRecord: 46.8ms | Allocations: 28778)
+
+
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 80ms (Views: 37.9ms | ActiveRecord: 13.3ms | Allocations: 44960)
+
+
+Started GET "/products" for ::1 at 2023-01-27 11:45:07 -0800
+Started GET "/orders" for ::1 at 2023-01-27 11:45:07 -0800
+Processing by ProductsController#index as */*
+Processing by OrdersController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 1653)
+
+
+  [1m[36mOrder Load (6.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 17.3ms | ActiveRecord: 6.8ms | Allocations: 2074)
+
+
+Started GET "/ordersnew" for ::1 at 2023-01-27 11:45:10 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"ordersnew"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1392)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/Armor/public/packs
+[Webpacker] warning package.json: No license field
+
+[Webpacker] Hash: 5ef03ecf87a64c95105f
+Version: webpack 4.46.0
+Time: 1383ms
+Built at: 01/27/2023 11:45:12 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-bc2a98fbbe6c1af4f5fe.js  3.67 MiB       application  [emitted] [immutable]  application
+     js/application-bc2a98fbbe6c1af4f5fe.js.map  3.76 MiB       application  [emitted] [dev]        application
+         js/hello_react-23c96215e6fa7c6eb36c.js  1.25 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-23c96215e6fa7c6eb36c.js.map  1.42 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-db4eace0b5d90d54aa27.js  3.67 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-db4eace0b5d90d54aa27.js.map  3.76 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-bc2a98fbbe6c1af4f5fe.js js/application-bc2a98fbbe6c1af4f5fe.js.map
+Entrypoint hello_react = js/hello_react-23c96215e6fa7c6eb36c.js js/hello_react-23c96215e6fa7c6eb36c.js.map
+Entrypoint server_rendering = js/server_rendering-db4eace0b5d90d54aa27.js js/server_rendering-db4eace0b5d90d54aa27.js.map
+[0] ./util.inspect (ignored) 15 bytes {application} {server_rendering} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 655 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 214 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.06 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 299 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 861 bytes {application} {hello_react} {server_rendering} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 633 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 553 bytes {application} {hello_react} {server_rendering} [built]
+    + 513 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2546.8ms | Allocations: 61642)
+Completed 200 OK in 2557ms (Views: 2551.1ms | ActiveRecord: 0.0ms | Allocations: 64501)
+
+
+Started GET "/products" for ::1 at 2023-01-27 11:45:13 -0800
+Started GET "/orders" for ::1 at 2023-01-27 11:45:13 -0800
+Processing by ProductsController#index as */*
+Processing by OrdersController#index as */*
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.9ms | Allocations: 1663)
+
+
+  [1m[36mOrder Load (1.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 1.9ms | Allocations: 2146)
+
+
+Started GET "/products" for ::1 at 2023-01-27 11:45:16 -0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (13.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 8.8ms | ActiveRecord: 13.9ms | Allocations: 1084)
+
+
+Started GET "/orders" for ::1 at 2023-01-27 11:45:16 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 4.6ms | ActiveRecord: 8.0ms | Allocations: 22440)
+
+
+Started GET "/products" for ::1 at 2023-01-27 11:45:16 -0800
+Started GET "/orders" for ::1 at 2023-01-27 11:45:16 -0800
+Processing by OrdersController#index as */*
+Processing by ProductsController#index as */*
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 852)
+
+
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 6.0ms | ActiveRecord: 6.8ms | Allocations: 19032)
+
+
+Started GET "/products" for ::1 at 2023-01-27 11:45:17 -0800
+Started GET "/orders" for ::1 at 2023-01-27 11:45:17 -0800
+Processing by OrdersController#index as */*
+Processing by ProductsController#index as */*
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 1096)
+
+
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 852)
+
+
+Started GET "/products" for ::1 at 2023-01-27 11:45:18 -0800
+Started GET "/orders" for ::1 at 2023-01-27 11:45:18 -0800
+Processing by OrdersController#index as */*
+Processing by ProductsController#index as */*
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 867)
+
+
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1083)
+
+
