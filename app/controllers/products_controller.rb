@@ -13,17 +13,27 @@ class ProductsController < ApplicationController
     end
     
     def update
-        product = Product.find(params[:id])
-        product.update(product_params)
-        if product.valid?
-            render json: product
+        @product = Product.find(params[:id])
+        @product.update(product_params)
+        # p @product.valid?
+        if @product.valid?
+            render json: @product
         else
-            render json: product.errors, status: 422
+            render json: @product.errors, status: 422
         end
+    end
+
+    def destroy
+        @product = Product.find(params[:id])
+        if @product.destroy
+            render json: @product
+        else
+            render json: @product.errors
+        end 
     end
     
     private 
     def product_params
-        params.require(:product).permit(:name, :price, :cost,:user_id)
+        params.require(:product).permit(:name, :price, :cost, :user_id)
     end
 end

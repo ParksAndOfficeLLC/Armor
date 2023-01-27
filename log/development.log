@@ -876,3 +876,1406 @@ Processing by OrdersController#index as HTML
 Completed 200 OK in 105ms (Views: 1.0ms | ActiveRecord: 28.8ms | Allocations: 22074)
 
 
+Started GET "/" for ::1 at 2023-01-25 15:56:25 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230124190906_add_userto_products.rb
+
+
+):
+  
+activerecord (7.0.4.1) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.1) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.1) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4.1) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.1) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-01-25 15:56:26 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230124190906_add_userto_products.rb
+
+
+):
+  
+activerecord (7.0.4.1) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.1) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.1) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4.1) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.1) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2023-01-25 15:59:32 -0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUsertoProducts (20230124190906)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.4ms)[0m  [1m[35mALTER TABLE "products" ADD "user_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230124190906"]]
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-01-25 15:59:32 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 5286)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.19
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+warning package.json: No license field
+warning package.json: No license field
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 4301.2ms | Allocations: 150033)
+Completed 200 OK in 4310ms (Views: 4303.8ms | ActiveRecord: 0.0ms | Allocations: 155976)
+
+
+Started GET "/" for ::1 at 2023-01-25 16:00:13 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.8ms | Allocations: 35997)
+Completed 200 OK in 69ms (Views: 63.1ms | ActiveRecord: 0.0ms | Allocations: 39751)
+
+
+Started GET "/protectedindex" for ::1 at 2023-01-25 16:00:17 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"protectedindex"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 767)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7179)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 7512)
+
+
+Started GET "/products" for ::1 at 2023-01-25 16:00:36 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (3.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 80ms (Views: 21.7ms | ActiveRecord: 31.7ms | Allocations: 20243)
+
+
+Started GET "/orders" for ::1 at 2023-01-25 16:00:45 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/orders_controller.rb:4:in `p'
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 0.9ms | ActiveRecord: 1.4ms | Allocations: 6382)
+
+
+Started GET "/orders" for ::1 at 2023-01-25 16:00:55 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (2.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/orders_controller.rb:4:in `p'
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 1.6ms | ActiveRecord: 2.6ms | Allocations: 1264)
+
+
+Started GET "/" for ::1 at 2023-01-25 17:09:30 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 714)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.2ms | Allocations: 7132)
+Completed 200 OK in 47ms (Views: 46.0ms | Allocations: 7891)
+
+
+Started GET "/" for ::1 at 2023-01-25 17:19:24 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.8ms | Allocations: 36134)
+Completed 200 OK in 56ms (Views: 51.6ms | ActiveRecord: 0.0ms | Allocations: 41664)
+
+
+Started GET "/products" for ::1 at 2023-01-25 17:19:30 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (12.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 62ms (Views: 39.6ms | ActiveRecord: 18.0ms | Allocations: 20238)
+
+
+Started GET "/orders" for ::1 at 2023-01-25 17:19:35 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/orders_controller.rb:4:in `p'
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 1.1ms | Allocations: 6421)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-25 17:19:59 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"users/sign_in"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 853)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 7521)
+Completed 200 OK in 24ms (Views: 20.8ms | Allocations: 8586)
+
+
+Started GET "/users" for ::1 at 2023-01-25 17:20:16 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"users"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 666)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 7072)
+Completed 200 OK in 18ms (Views: 16.8ms | Allocations: 7398)
+
+
+Started GET "/" for ::1 at 2023-01-25 17:20:48 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 684)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 7078)
+Completed 200 OK in 21ms (Views: 18.1ms | Allocations: 7405)
+
+
+Started GET "/products/new" for ::1 at 2023-01-25 18:29:47 -0800
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for ProductsController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/0rderss/new" for ::1 at 2023-01-25 18:30:28 -0800
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"0rderss/new"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 675)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 7084)
+Completed 200 OK in 28ms (Views: 25.5ms | Allocations: 7415)
+
+
+Started GET "/orders/new" for ::1 at 2023-01-25 18:30:43 -0800
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for OrdersController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/orders" for ::1 at 2023-01-25 18:30:51 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (1.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/orders_controller.rb:4:in `p'
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 2.3ms | ActiveRecord: 12.8ms | Allocations: 4172)
+
+
+Started GET "/products" for ::1 at 2023-01-25 18:32:27 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (3.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 71ms (Views: 49.1ms | ActiveRecord: 12.3ms | Allocations: 10979)
+
+
+Started GET "/products/:2" for ::1 at 2023-01-25 18:32:46 -0800
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ProductsController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/products" for ::1 at 2023-01-25 19:31:43 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 66ms (Views: 62.2ms | ActiveRecord: 31.5ms | Allocations: 21986)
+
+
+Started GET "/products/:1" for ::1 at 2023-01-25 19:31:55 -0800
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ProductsController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/products/1" for ::1 at 2023-01-25 19:32:00 -0800
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ProductsController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/orders" for ::1 at 2023-01-25 19:32:11 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/orders_controller.rb:4:in `p'
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 1.3ms | Allocations: 5830)
+
+
+Started GET "/orders" for ::1 at 2023-01-25 19:42:13 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/orders_controller.rb:4:in `p'
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 41ms (Views: 1.1ms | ActiveRecord: 7.6ms | Allocations: 4123)
+
+
+Started GET "/orders" for ::1 at 2023-01-25 19:42:14 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/orders_controller.rb:4:in `p'
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 1263)
+
+
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mOrder Load (2.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "test@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-01-26 03:43:36.287830"], ["updated_at", "2023-01-26 03:43:36.287830"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["name", "shirt"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "cost", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "shirt"], ["price", 10.22], ["cost", 8.55], ["created_at", "2023-01-26 03:43:36.307162"], ["updated_at", "2023-01-26 03:43:36.307162"], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "cost", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "hat"], ["price", 8.72], ["cost", 6.55], ["created_at", "2023-01-26 03:43:36.309061"], ["updated_at", "2023-01-26 03:43:36.309061"], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "cost", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "hoodie"], ["price", 20.22], ["cost", 15.53], ["created_at", "2023-01-26 03:43:36.310398"], ["updated_at", "2023-01-26 03:43:36.310398"], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mOrder Load (11.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+Started GET "/orders" for ::1 at 2023-01-25 19:44:17 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/orders_controller.rb:4:in `p'
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 0.9ms | Allocations: 1276)
+
+
+Started GET "/orders" for ::1 at 2023-01-25 19:44:18 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/orders_controller.rb:4:in `p'
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 1276)
+
+
+Started GET "/" for ::1 at 2023-01-25 19:45:25 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1437)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 84.6ms | Allocations: 36397)
+Completed 200 OK in 95ms (Views: 88.5ms | ActiveRecord: 0.0ms | Allocations: 41933)
+
+
+Started GET "/products" for ::1 at 2023-01-25 19:45:52 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 5.3ms | ActiveRecord: 7.1ms | Allocations: 23248)
+
+
+Started GET "/products/:3" for ::1 at 2023-01-25 19:46:02 -0800
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ProductsController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/products/3" for ::1 at 2023-01-25 19:46:08 -0800
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ProductsController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/products" for ::1 at 2023-01-25 19:46:21 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.6ms | Allocations: 1245)
+
+
+Started GET "/orders" for ::1 at 2023-01-25 19:49:41 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/orders_controller.rb:4:in `p'
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 9242)
+
+
+Started GET "/orders/new" for ::1 at 2023-01-25 19:51:09 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for OrdersController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/orders/create" for ::1 at 2023-01-25 19:51:39 -0800
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for OrdersController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/products" for ::1 at 2023-01-25 19:52:22 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 56ms (Views: 49.4ms | ActiveRecord: 14.5ms | Allocations: 23383)
+
+
+Started GET "/products/:3" for ::1 at 2023-01-25 20:55:09 -0800
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ProductsController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/products/:2" for ::1 at 2023-01-25 20:58:35 -0800
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ProductsController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/products/new" for ::1 at 2023-01-25 20:58:40 -0800
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for ProductsController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/products/" for ::1 at 2023-01-25 20:58:46 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 97ms (Views: 73.6ms | ActiveRecord: 23.7ms | Allocations: 25996)
+
+
+Started GET "/rails/info/routes" for ::1 at 2023-01-25 21:00:49 -0800
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/learnacademy/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/learnacademy/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/learnacademy/.rvm/gems/ruby-3.0.0/gems/actionpack-7.0.4.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [63 times] (Duration: 22.8ms | Allocations: 9733)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-3.0.0/gems/actionpack-7.0.4.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 3.5ms | Allocations: 1760)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 39.2ms | Allocations: 17165)
+  Rendered layout /Users/learnacademy/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4.1/lib/rails/templates/layouts/application.html.erb (Duration: 40.0ms | Allocations: 17547)
+Completed 200 OK in 50ms (Views: 44.2ms | ActiveRecord: 0.0ms | Allocations: 18682)
+
+
+Started GET "/rails/info/routes?path=patch" for ::1 at 2023-01-26 08:55:51 -0800
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"patch"}
+Completed 200 OK in 4ms (Views: 0.9ms | Allocations: 2692)
+
+
+Started GET "/rails/info/routes?path=patch" for ::1 at 2023-01-26 08:55:52 -0800
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"patch"}
+Completed 200 OK in 2ms (Views: 0.2ms | Allocations: 963)
+
+
+Started GET "/orders" for ::1 at 2023-01-26 09:38:03 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (1.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/orders_controller.rb:4:in `p'
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 93ms (Views: 0.9ms | ActiveRecord: 65.8ms | Allocations: 8110)
+
+
+Started GET "/products" for ::1 at 2023-01-26 09:46:57 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 7.9ms | Allocations: 8573)
+
+
+Started GET "/orders" for ::1 at 2023-01-26 10:41:51 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 21.0ms | ActiveRecord: 10.4ms | Allocations: 7486)
+
+
+Started GET "/products/" for ::1 at 2023-01-26 10:42:14 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 7.5ms | Allocations: 8551)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToList (20230126225543)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "products" ADD "order_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230126225543"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mProduct Load (2.8ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Create (2.5ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["product_id", 2], ["created_at", "2023-01-26 23:08:19.946815"], ["updated_at", "2023-01-26 23:08:19.946815"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Create (1.9ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "cost", "created_at", "updated_at", "user_id", "order_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "hat"], ["price", 10.5], ["cost", 7.5], ["created_at", "2023-01-26 23:10:35.577547"], ["updated_at", "2023-01-26 23:10:35.577547"], ["user_id", 1], ["order_id", 1]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (8561.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "store_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (43.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "store_development"[0m
+  [1m[35m (20.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "store_test"[0m
+  [1m[35m (154.9ms)[0m  [1m[35mCREATE DATABASE "store_development" ENCODING = 'unicode'[0m
+  [1m[35m (51.6ms)[0m  [1m[35mCREATE DATABASE "store_test" ENCODING = 'unicode'[0m
+  [1m[35m (25.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20230120032251)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (28.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230120032251"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20230120035056)
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "user_id" integer, "product_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230120035056"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProducts (20230120035208)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "price" float, "cost" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230120035208"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUsertoProducts (20230124190906)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "products" ADD "user_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230124190906"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnsToList (20230126225543)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "products" ADD "order_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230126225543"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-01-26 23:16:29.882599"], ["updated_at", "2023-01-26 23:16:29.882599"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "test@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-01-26 23:16:40.837086"], ["updated_at", "2023-01-26 23:16:40.837086"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["name", "shirt"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["name", "shirt"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 ORDER BY "orders"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Create (1.8ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["product_id", 1], ["created_at", "2023-01-26 23:19:28.377153"], ["updated_at", "2023-01-26 23:19:28.377153"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "cost", "created_at", "updated_at", "user_id", "order_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "shirt"], ["price", 10.22], ["cost", 8.55], ["created_at", "2023-01-26 23:19:28.384737"], ["updated_at", "2023-01-26 23:19:28.384737"], ["user_id", 1], ["order_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "cost", "created_at", "updated_at", "user_id", "order_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "hat"], ["price", 8.72], ["cost", 6.55], ["created_at", "2023-01-26 23:19:28.387661"], ["updated_at", "2023-01-26 23:19:28.387661"], ["user_id", 1], ["order_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "cost", "created_at", "updated_at", "user_id", "order_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "hoodie"], ["price", 20.22], ["cost", 15.53], ["created_at", "2023-01-26 23:19:28.392389"], ["updated_at", "2023-01-26 23:19:28.392389"], ["user_id", 1], ["order_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2023-01-26 15:44:29 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1431)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 90.8ms | Allocations: 35904)
+Completed 200 OK in 117ms (Views: 93.3ms | ActiveRecord: 0.0ms | Allocations: 41441)
+
+
+Started GET "/orders" for ::1 at 2023-01-26 15:44:37 -0800
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (1.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:5:in `index'
+Completed 200 OK in 50ms (Views: 14.1ms | ActiveRecord: 9.2ms | Allocations: 19690)
+
+
+Started GET "/products" for ::1 at 2023-01-26 15:45:07 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (7.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 7.4ms | ActiveRecord: 23.2ms | Allocations: 23605)
+
+
