@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import PropTypes from "prop-types";
+
 import ProductNew from "./pages/ProductNew";
 import OrderNew from "./pages/OrderNew";
 import ProductIndex from "./pages/ProductIndex";
