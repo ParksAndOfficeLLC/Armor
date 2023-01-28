@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import ProductNew from "./pages/ProductNew";
-import OrderNew from "./pages/OrderNew";
-import ProductIndex from "./pages/ProductIndex";
+import Home from './pages/Home';
 import ContactUs from "./pages/ContactUs";
+import ProductNew from "./pages/ProductNew";
+import ProductIndex from "./pages/ProductIndex";
+import OrderNew from "./pages/OrderNew";
+import Footer from  './componets/Footer';
+import Header from "./componets/Header";
 
 const App = (props) => {
   const { loggedIn, currentUser, newUserRoute, signInRoute, signOutRoute } =
