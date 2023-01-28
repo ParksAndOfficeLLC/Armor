@@ -1,11 +1,9 @@
-import { Formik, Form, Field } from "formik";
 import React, { useEffect, useState } from "react";
 import {
   Card,
   CardTitle,
   CardBody,
   CardText,
-  CardLink,
   ListGroup,
   ListGroupItem,
   Button,
@@ -15,14 +13,13 @@ import { readProduct } from "../fetches";
  
 
 const ProductIndex = () => {
-  // const products = readProduct()
-  // console.log({products})
- const [products, setProducts] = useState([])
-  useEffect(async () => {
-    const data = await readProduct()
-    setProducts(data)
-  },[products])
-  console.log(products)
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    readProduct().then((payload) => setProducts(payload));
+
+  }, []);
+
   return (
     <>
       <h3>All Products</h3>
