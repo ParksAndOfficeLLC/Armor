@@ -9,6 +9,8 @@ import { Formik, Form, Field } from "formik";
 
 const ProductNew = ({ createProduct, logged_in }) => {
   const navigate = useNavigate();
+
+  //with formik you wouldn't need this
   const [newProduct, setNewProduct] = useState({
     name: "",
     price: "",
@@ -17,10 +19,12 @@ const ProductNew = ({ createProduct, logged_in }) => {
     order_id: "",
   });
 
+  //with formik you wouldn't need this
   const handleChange = (e) => {
     setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
   };
 
+  //with formik you could call this onSubmit - or move the inside of this function to the onSubmit function in the Formik onSubmit
   const handleSubmit = () => {
     createProduct(newProduct);
     navigate("/productindex");
@@ -36,8 +40,8 @@ const ProductNew = ({ createProduct, logged_in }) => {
         }}
         onSubmit={async (values) => {
           //this runs the submit function 
-          await new Promise((r) => setTimeout(r, 500));
-          alert(JSON.stringify(values, null, 2));
+          await new Promise((r) => setTimeout(r, 500)); //this is just to simulate a delay
+          alert(JSON.stringify(values, null, 2)); //this is just to show the values in an alert message
         }}
       >
         <Form className="submitForm">
@@ -63,7 +67,6 @@ const ProductNew = ({ createProduct, logged_in }) => {
                 if you want to use the Reactstrap Button component, you can still, but there's an extra step to get the handleSubmit to work.
 
                 You would have to pull handleSubmit from formik and use that to call OnSubmit; if you look at the formik docs, you can see how to do that.
-
              */}
             <button type="submit">
               Submit New Product
