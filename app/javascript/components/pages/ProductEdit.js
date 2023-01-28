@@ -1,5 +1,5 @@
 import { Formik, Form, Field } from "formik";
-import React, { useState } from "react";
+import React from "react";
 import {
   FormGroup,
   Label,
@@ -9,10 +9,10 @@ import { useNavigate, useParams } from "react-router-dom";
 import { updateProduct } from "../fetches"
 
 const ProductEdit = ({ products, logged_in, current_user }) => {
-    console.log(products)
     // const navigate = useNavigate();
     const { id } = useParams();
     let currentProduct = products?.find((product) => product.id === +id)
+
     console.log(currentProduct)
 //     const [editProduct, setEditProduct] = useState({
 //         name: currentProduct.name,
@@ -33,6 +33,7 @@ const ProductEdit = ({ products, logged_in, current_user }) => {
 //     navigate(`/productshow/${id}`)
 //   }
 
+  console.log({currentProduct})
   // if (logged_in) {
     return (
       <Formik
@@ -46,7 +47,11 @@ const ProductEdit = ({ products, logged_in, current_user }) => {
             console.log(values)
            const response = await updateProduct(values, id)
            console.log({response})
-        //   navigate(`/productshow/${id}`);
+           if(response){
+              navigate(`/productshow/${id}`);
+           } else {
+                alert("something went wrong")
+           }
         }}
       >
         <Form className="submitForm">

@@ -10,14 +10,12 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import { readProduct } from "../fetches";
- 
 
 const ProductIndex = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     readProduct().then((payload) => setProducts(payload));
-
   }, []);
 
   return (
@@ -67,4 +65,4 @@ const ProductIndex = () => {
   );
 };
 
-export default ProductIndex
+export default ProductIndex;

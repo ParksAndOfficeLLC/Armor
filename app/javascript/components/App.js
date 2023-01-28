@@ -9,15 +9,22 @@ import ProductEdit from "./pages/ProductEdit";
 import OrderNew from "./pages/OrderNew";
 import Footer from "./componets/Footer";
 import Header from "./componets/Header";
+import Orders from "./pages/Orders";
+
+import { readProduct } from "./fetches";
 
 const App = (props) => {
-  const { loggedIn, currentUser, newUserRoute, signInRoute, signOutRoute } =
-    props;
-  const [products, setproducts] = useState([]);
+
+
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    readProduct().then((payload) => setProducts(payload));
+  }, []);
 
   const createProduct = (product) => {
-    console.log(product);
-    fetch("http://localhost:3000/products", {
+    fetch("/products", {
       body: JSON.stringify(product),
       header: {
         "Content-Type": "application/json",
@@ -44,7 +51,7 @@ const App = (props) => {
   };
 
   const createOrder = (order) => {
-    fetch("http://localhost:3000/orders", {
+    fetch("/orders", {
       body: JSON.stringify(order),
       header: {
         "Content-Type": "application/json",
@@ -70,20 +77,12 @@ const App = (props) => {
           path="/ordersnew"
           element={<OrderNew createOrder={createOrder} {...props} />}
         />
+        <Route path="/orders" element={<Orders />} />
         <Route
           path="/productsindex"
           element={<ProductIndex products={products} />}
         />
-        {/* <Route
-          path="/productsshow/:id"
-          element={<ProductShow products={products} />} /> */}
-        <Route
-          path="/productedit/:id"
-          element={
-            <ProductEdit
-            />
-          }
-        />
+        <Route path="/productedit/:id" element={<ProductEdit products={products}/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
