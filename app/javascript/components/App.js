@@ -1,30 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from './pages/Home';
+import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
 import ProductNew from "./pages/ProductNew";
 import ProductIndex from "./pages/ProductIndex";
+import ProductEdit from "./pages/ProductEdit";
 import OrderNew from "./pages/OrderNew";
-import Footer from  './componets/Footer';
+import Footer from "./componets/Footer";
 import Header from "./componets/Header";
 
 const App = (props) => {
   const { loggedIn, currentUser, newUserRoute, signInRoute, signOutRoute } =
     props;
   const [products, setproducts] = useState([]);
-  useEffect(() => {
-    readProducts();
-  }, []);
-
-  const readProducts = () => {
-    fetch("/products")
-      .then((response) => response.json())
-      .then((payload) => {
-        setproducts(payload);
-      })
-      .catch((error) => console.log(error));
-  };
 
   const createProduct = (product) => {
     console.log(product);
@@ -36,7 +25,7 @@ const App = (props) => {
       method: "Post",
     })
       .then((response) => response.json())
-      .then((payload) => readProducts())
+      .then((payload) => payload)
       .catch((errors) => console.log("Product creation errors:", errors));
   };
 
@@ -84,6 +73,16 @@ const App = (props) => {
         <Route
           path="/productsindex"
           element={<ProductIndex products={products} />}
+        />
+        {/* <Route
+          path="/productsshow/:id"
+          element={<ProductShow products={products} />} /> */}
+        <Route
+          path="/productedit/:id"
+          element={
+            <ProductEdit
+            />
+          }
         />
       </Routes>
       <Footer />

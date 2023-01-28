@@ -1,4 +1,5 @@
-import React from "react";
+import { Formik, Form, Field } from "formik";
+import React, { useEffect, useState } from "react";
 import {
   Card,
   CardTitle,
@@ -10,8 +11,18 @@ import {
   Button,
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
+import { readProduct } from "../fetches";
+ 
 
-const ProductIndex = ({ products }) => {
+const ProductIndex = () => {
+  // const products = readProduct()
+  // console.log({products})
+ const [products, setProducts] = useState([])
+  useEffect(async () => {
+    const data = await readProduct()
+    setProducts(data)
+  },[products])
+  console.log(products)
   return (
     <>
       <h3>All Products</h3>
@@ -47,6 +58,9 @@ const ProductIndex = ({ products }) => {
             <CardBody>
               <NavLink to={`/productshow/${product.id}`} className="nav-link">
                 <Button>See Product</Button>
+              </NavLink>
+              <NavLink to={`/productedit/${product.id}`} className="nav-link">
+                <Button>Edit Product</Button>
               </NavLink>
             </CardBody>
           </Card>

@@ -15,7 +15,7 @@ const OrderNew = ({ createOrder, logged_in, current_user }) => {
 
     const handleSubmit = () => {
        createOrder(newOrder)
-       navigate("/orderindex") 
+       navigate("/productsindex") 
     }
 
     if(logged_in) {

@@ -5,55 +5,57 @@ import {
   Label,
   Input,
 } from "reactstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { updateProduct } from "../fetches"
 
-
-const ProductNew = ({ createProduct, logged_in }) => {
-  const navigate = useNavigate();
+const ProductEdit = ({ products, logged_in, current_user }) => {
+    console.log(products)
+    // const navigate = useNavigate();
+    const { id } = useParams();
+    let currentProduct = products?.find((product) => product.id === +id)
+    console.log(currentProduct)
+//     const [editProduct, setEditProduct] = useState({
+//         name: currentProduct.name,
+//         price: currentProduct.price,
+//         cost: currentProduct.cost,
+//         user_id: currentProduct.user_id,
+//         order_id: currentProduct.order_id,
+//   });
 
   //with formik you wouldn't need this
-  const [newProduct, setNewProduct] = useState({
-    name: "",
-    price: "",
-    cost: "",
-    user_id: "",
-    order_id: "",
-  });
-
-  //with formik you wouldn't need this
-  const handleChange = (e) => {
-    setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
-  };
+//   const onSubmit = (e) => {
+//     setEditProduct({ ...editProduct, [e.target.name]: e.target.value });
+//   };
 
   //with formik you could call this onSubmit - or move the inside of this function to the onSubmit function in the Formik onSubmit
-  // const handleSubmit = () => {
-  //   createProduct(newProduct);
-  //   navigate("/productindex");
-  // };
+//   const onSubmit = () => {
+//     editProduct(updateProduct, id)
+//     navigate(`/productshow/${id}`)
+//   }
 
   // if (logged_in) {
     return (
       <Formik
         initialValues={{
-          email: "",
-          price: "",
-          cost: "",
+            name: currentProduct?.name || "",
+            price: currentProduct?.price || "",
+            cost: currentProduct?.cost || "",
         }}
+
         onSubmit={async (values) => {
-          createProduct(newProduct);
-          navigate("/productsindex");
-          //this runs the submit function 
-          await new Promise((r) => setTimeout(r, 500)); //this is just to simulate a delay
-          alert(JSON.stringify(values, null, 2)); //this is just to show the values in an alert message
+            console.log(values)
+           const response = await updateProduct(values, id)
+           console.log({response})
+        //   navigate(`/productshow/${id}`);
         }}
       >
         <Form className="submitForm">
           <FormGroup>
             <Label for="name">Name</Label>
             <Field
-              id="firstName"
-              name="firstName"
-              placeholder="Jane"
+              id="name"
+              name="name"
+              placeholder="Product Name"
               as={Input}
             />
 
@@ -72,7 +74,7 @@ const ProductNew = ({ createProduct, logged_in }) => {
                 You would have to pull handleSubmit from formik and use that to call OnSubmit; if you look at the formik docs, you can see how to do that.
              */}
             <button type="submit">
-              Submit New Product
+              Submit Updated Product
             </button>
           </FormGroup>
         </Form>
@@ -83,4 +85,4 @@ const ProductNew = ({ createProduct, logged_in }) => {
 //   }
 };
 
-export default ProductNew
+export default ProductEdit
