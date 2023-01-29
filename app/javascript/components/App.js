@@ -1,34 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from './pages/Home';
+import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
 import ProductNew from "./pages/ProductNew";
 import ProductIndex from "./pages/ProductIndex";
+import ProductEdit from "./pages/ProductEdit";
 import OrderNew from "./pages/OrderNew";
-import Footer from  './componets/Footer';
+import Footer from "./componets/Footer";
 import Header from "./componets/Header";
+import Orders from "./pages/Orders";
+
+import { readProduct } from "./fetches";
 
 const App = (props) => {
-  const { loggedIn, currentUser, newUserRoute, signInRoute, signOutRoute } =
-    props;
-  const [products, setproducts] = useState([]);
+
+
+
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
-    readProducts();
+    readProduct().then((payload) => setProducts(payload));
   }, []);
 
-  const readProducts = () => {
-    fetch("/products")
-      .then((response) => response.json())
-      .then((payload) => {
-        setproducts(payload);
-      })
-      .catch((error) => console.log(error));
-  };
-
   const createProduct = (product) => {
-    console.log(product);
-    fetch("http://localhost:3000/products", {
+    fetch("/products", {
       body: JSON.stringify(product),
       header: {
         "Content-Type": "application/json",
@@ -36,7 +32,7 @@ const App = (props) => {
       method: "Post",
     })
       .then((response) => response.json())
-      .then((payload) => readProducts())
+      .then((payload) => payload)
       .catch((errors) => console.log("Product creation errors:", errors));
   };
 
@@ -55,7 +51,7 @@ const App = (props) => {
   };
 
   const createOrder = (order) => {
-    fetch("http://localhost:3000/orders", {
+    fetch("/orders", {
       body: JSON.stringify(order),
       header: {
         "Content-Type": "application/json",
@@ -81,10 +77,12 @@ const App = (props) => {
           path="/ordersnew"
           element={<OrderNew createOrder={createOrder} {...props} />}
         />
+        <Route path="/orders" element={<Orders />} />
         <Route
           path="/productsindex"
           element={<ProductIndex products={products} />}
         />
+        <Route path="/productedit/:id" element={<ProductEdit products={products}/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Card,
   CardTitle,
   CardBody,
   CardText,
-  CardLink,
   ListGroup,
   ListGroupItem,
   Button,
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
+import { readProduct } from "../fetches";
 
-const ProductIndex = ({ products }) => {
+const ProductIndex = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    readProduct().then((payload) => setProducts(payload));
+  }, []);
+
   return (
     <>
       <h3>All Products</h3>
@@ -48,6 +54,9 @@ const ProductIndex = ({ products }) => {
               <NavLink to={`/productshow/${product.id}`} className="nav-link">
                 <Button>See Product</Button>
               </NavLink>
+              <NavLink to={`/productedit/${product.id}`} className="nav-link">
+                <Button>Edit Product</Button>
+              </NavLink>
             </CardBody>
           </Card>
         );
@@ -56,4 +65,4 @@ const ProductIndex = ({ products }) => {
   );
 };
 
-export default ProductIndex
+export default ProductIndex;
