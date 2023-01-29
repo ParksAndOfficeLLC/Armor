@@ -63,6 +63,19 @@ const App = (props) => {
       .catch((errors) => console.log("Order creation errors:", errors));
   };
 
+  const deleteProducts = (id) => {
+    console.log("id:", id);
+    fetch(`/productsindex/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+      .then((response) => response.json())
+      .then((payload) => readProduct(payload))
+      .catch((errors) => console.log("delete errors:", errors))
+    }
+
   return (
     <BrowserRouter>
       <Header />
@@ -80,7 +93,7 @@ const App = (props) => {
         <Route path="/orders" element={<Orders />} />
         <Route
           path="/productsindex"
-          element={<ProductIndex products={products} />}
+          element={<ProductIndex products={products} deleteProducts={deleteProducts}/>}
         />
         <Route path="/productedit/:id" element={<ProductEdit products={products}/>} />
       </Routes>
