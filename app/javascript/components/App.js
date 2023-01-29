@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './pages/Home';
 import ContactUs from "./pages/ContactUs";
@@ -83,7 +84,7 @@ const App = (props) => {
         />
         <Route
           path="/productsindex"
-          element={<ProductIndex products={products} />}
+          element={<ProductIndex products={products} />} 
         />
       </Routes>
       <Footer />
