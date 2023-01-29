@@ -18,6 +18,10 @@ const ProductIndex = () => {
     readProduct().then((payload) => setProducts(payload));
   }, []);
 
+  const deleteProd = (id) => {
+    deleteProduct(id)
+  }
+
   return (
     <>
       <h3>All Products</h3>
@@ -56,6 +60,10 @@ const ProductIndex = () => {
               </NavLink>
               <NavLink to={`/productedit/${product.id}`} className="nav-link">
                 <Button>Edit Product</Button>
+              </NavLink>
+              <NavLink to={`/productedit/${product.id}`} className="nav-link">
+                <Button onClick={
+                  () => deleteProd(product?.id)}>Delete Product</Button>
               </NavLink>
             </CardBody>
           </Card>
