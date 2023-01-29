@@ -67,10 +67,10 @@ const ProductEdit = ({ products, logged_in, current_user }) => {
             {/* Formik's uses the name of the Label in this case for="price" */}
             <Label for="price">Price</Label>
             {/* Associastes the name ^ in the for="<here>" with the id="price", uses that to handle changing state. */}
-            <Field type="float" name="price" id="price" as={Input} />
+            <Field type="float" name="price" id="price" placeholder="Price" as={Input} />
 
             <Label for="cost">Wholesale Price</Label>
-            <Field type="float" name="cost" id="cost" as={Input} />
+            <Field type="float" name="cost" id="cost" placeholder="Cost" as={Input} />
 
             {/* formik handles the handleSubmit; calls onSubmit, you can use css to style this button
 

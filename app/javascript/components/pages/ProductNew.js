@@ -8,7 +8,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 
-const ProductNew = ({ createProduct, logged_in }) => {
+const ProductNew = ({ createProduct, loggedIn }) => {
   const navigate = useNavigate();
 
   //with formik you wouldn't need this
@@ -31,7 +31,7 @@ const ProductNew = ({ createProduct, logged_in }) => {
   //   navigate("/productindex");
   // };
 
-  // if (logged_in) {
+  if (loggedIn) {
     return (
       <Formik
         initialValues={{
@@ -52,18 +52,18 @@ const ProductNew = ({ createProduct, logged_in }) => {
             <Label for="name">Name</Label>
             <Field
               id="firstName"
-              name="firstName"
-              placeholder="Jane"
+              name="Name"
+              placeholder="Name"
               as={Input}
             />
 
             {/* Formik's uses the name of the Label in this case for="price" */}
             <Label for="price">Price</Label>
             {/* Associastes the name ^ in the for="<here>" with the id="price", uses that to handle changing state. */}
-            <Field type="float" name="price" id="price" as={Input} />
+            <Field type="float" name="price" id="price"  placeholder="Price" as={Input} />
 
             <Label for="cost">Wholesale Price</Label>
-            <Field type="float" name="cost" id="cost" as={Input} />
+            <Field type="float" name="cost" id="cost"  placeholder="Cost" as={Input} />
 
             {/* formik handles the handleSubmit; calls onSubmit, you can use css to style this button
 
@@ -78,9 +78,9 @@ const ProductNew = ({ createProduct, logged_in }) => {
         </Form>
       </Formik>
     );
-//   } else {
-//     return <h1>Please sign in to add new products</h1>;
-//   }
+  } else {
+    return <h1>Please sign in to add new products</h1>;
+  }
 };
 
 export default ProductNew

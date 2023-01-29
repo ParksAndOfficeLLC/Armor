@@ -10,13 +10,12 @@ import OrderNew from "./pages/OrderNew";
 import Footer from "./componets/Footer";
 import Header from "./componets/Header";
 import Orders from "./pages/Orders";
-
+import OrdersProtectedIndex from "./pages/OrdersProtectedIndex";
+import ProductShow from "./pages/ProductShow";
 import { readProduct } from "./fetches";
 
+
 const App = (props) => {
-
-
-
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -108,7 +107,18 @@ const App = (props) => {
           path="/productsindex"
           element={<ProductIndex products={products} deleteProducts={deleteProducts}/>}
         />
-        <Route path="/productedit/:id" element={<ProductEdit products={products}/>} />
+        <Route
+          path="/productshow"
+          element={<ProductShow products={products} />}
+        />
+        <Route
+          path="/ordersprotectedindex"
+          element={<OrdersProtectedIndex orders={orders} />}
+        />
+        <Route
+          path="/productedit/:id"
+          element={<ProductEdit products={products} />}
+        />
       </Routes>
       <Footer />
     </BrowserRouter>

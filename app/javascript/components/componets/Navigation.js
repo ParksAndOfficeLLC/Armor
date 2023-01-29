@@ -25,7 +25,10 @@ const Navigation = () => {
             <NavLink to="/productsindex">Products</NavLink>
           </li>
           <li>
-            <NavLink to="/ordersindex">Orders</NavLink>
+            <NavLink to="/productsnew">Add New Products</NavLink>
+          </li>
+          <li>
+            <NavLink to="/ordersprotectedindex">Your Orders</NavLink>
           </li>
           <li>
             <NavLink to="/ordersnew">Create Orders</NavLink>
