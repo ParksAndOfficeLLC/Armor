@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
 import ProductNew from "./pages/ProductNew";
@@ -45,7 +44,11 @@ const App = (props) => {
         <Route
           path="/productsindex"
           element={
-            <ProductIndex products={products} deleteProducts={deleteProducts} {...props} />
+            <ProductIndex
+              products={products}
+              deleteProducts={deleteProducts}
+              {...props}
+            />
           }
         />
         <Route
@@ -58,7 +61,7 @@ const App = (props) => {
         />
         <Route
           path="/productedit/:id"
-          element={<ProductEdit products={products} {...props}/>}
+          element={<ProductEdit products={products} {...props} />}
         />
         <Route path="/about" element={<About />} />
       </Routes>

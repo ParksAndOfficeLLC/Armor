@@ -29,21 +29,24 @@ RSpec.describe "Products", type: :request do
   describe "PATCH /update" do
     it "updates a product" do
       user = User.where(email: "test@example.com").first_or_create(password: "password", password_confirmation: "password")
-      product = Product.create(name: 'shirt', price: 10.22, cost: 8.55, user_id: user.id)
-      # p product
+      order = Order.where(user_id: 1).first_or_create(product_id: 1)
+      product = Product.create(name: "shirt", price: 10.22, cost: 8.55, user_id: user.id)
+      p product
       product_params = {
         product:
           {
-            name: 'T-Shirt',
+            name: 't-shirt',
             price: 10.22,
             cost: 8.55,
             user_id: user.id
           }
       }
+      product = Product.create(name: "t-shirt", price: 10.22, cost: 8.55, user_id: user.id)
+      p product
       patch "/products/#{product.id}", params: product_params
       updated_product = JSON.parse(response.body,object_class:OpenStruct)
       expect(response).to have_http_status(200)
-      expect(updated_product.name).to eq 'T-Shirt'
+      expect(updated_product.name).to eq 't-shirt'
     end
   end
 
