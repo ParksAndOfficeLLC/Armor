@@ -33,7 +33,7 @@ const OrdersProtectedIndex = ({ currentUser }) => {
 
   useEffect(() => {
     readOrders().then((payload) => setOrders(payload));
-  }, [orders]);
+  }, []);
 
   const current_user_orders = orders?.filter((orders) => {
     return orders.user_id === currentUser.id;
@@ -61,7 +61,12 @@ const OrdersProtectedIndex = ({ currentUser }) => {
               <NavLink to={`/productsindex`}>
                 <Button>See More Products</Button>
               </NavLink>
-                <Button onClick={() => deleteOrders(order?.id)}>
+                <Button onClick={async () => {
+                  await deleteOrders(order.id);
+
+                  readOrders().then((payload) => setOrders(payload));
+                  return;
+                }}>
                   Delete Order
                 </Button>
             </CardBody>
