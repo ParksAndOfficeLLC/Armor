@@ -28,11 +28,12 @@ class OrdersController < ApplicationController
   end
 
   def destroy
-    order = Order.find(params[:id])
-    if order.destroy
-      render json: order
+    p params
+    @order = Order.find(params[:id])
+    if @order.destroy
+      render json: @order
     else
-      render json: order.errors
+      render json: @order.errors
     end
   end
 

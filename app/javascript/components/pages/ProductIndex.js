@@ -11,7 +11,7 @@ import {
 import { NavLink } from "react-router-dom";
 import { readProduct } from "../fetches";
 
-const ProductIndex = () => {
+const ProductIndex = ({deleteProducts}) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const ProductIndex = () => {
   }, []);
 
   const deleteProd = (id) => {
-    deleteProduct(id)
+    deleteProducts(id)
   }
 
   return (

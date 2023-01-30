@@ -1,53 +1,56 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
 import { NavLink } from "react-router-dom";
-import { readOrders } from "../App";
 
-const OrdersProtectedIndex = ({ orders, current_user, deleteOrder }) => {
+const readOrders = async () => {
+  try {
+    const response = await fetch("/orders");
+    const payload = await response.json();
+    return payload;
+  } catch (error) {
+    return console.log(error);
+  }
+};
+
+const OrdersProtectedIndex = ({ currentUser, delord }) => {
+  const [orders, setOrders] = useState([]);
+
+  useEffect(() => {
+    readOrders().then((payload) => setOrders(payload));
+  }, []);
+
   const current_user_orders = orders?.filter((orders) => {
-    console.log(orders);
-    console.log("orderID", orders.user_id);
-    console.log("USER", current_user);
-    return orders.user_id === current_user;
-    // const eraser = (orders.id) => {
-    //     deleteOrder(orders.id)
-    // }
 
-    // const [orders, setOrders] = useState([]);
 
-    // useEffect(() => {
-    //   readOrders().then((payload) => setOrders(payload));
-    // }, []);
+    return orders.user_id === currentUser.id;
   });
+
 
   return (
     <div className="card-index">
-      {/* {current_user && orders?.filter(orders => orders.user_id === user.id).map(orders => { */}
       <h3>Your Current Order</h3>
-      {current_user_orders?.map((orders) => {
+      {current_user_orders?.map((order, index) => {
+
         return (
           <Card
-            style={{
-              width: "14rem",
-            }}
             key={index}
+            color="warning"
+            outline
+            style={{
+              width: "18rem",
+            }}
           >
+            <img alt="Sample" src="https://picsum.photos/300/200" />
             <CardBody>
-              <CardTitle tag="h5">Your Order Number {orders.id}</CardTitle>
+              <CardTitle tag="h5">Your Order Number {order.id}</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
-                Includes The Following Product: {orders.product_id}
+                Includes The Following Product: {order.product_id}
               </CardSubtitle>
               <NavLink to={`/productsindex`}>
                 <Button>See More Products</Button>
               </NavLink>
               <NavLink to="/">
-                <Button
-                  onClick={() => eraser(`${orders?.id}`)}
-                  outline
-                  color=""
-                >
-                  Delete This Order
-                </Button>
+                <Button onClick={() => delord(order?.id)}>Delete Order</Button>
               </NavLink>
             </CardBody>
           </Card>

@@ -9,7 +9,6 @@ import ProductEdit from "./pages/ProductEdit";
 import OrderNew from "./pages/OrderNew";
 import Footer from "./componets/Footer";
 import Header from "./componets/Header";
-import Orders from "./pages/Orders";
 import OrdersProtectedIndex from "./pages/OrdersProtectedIndex";
 import ProductShow from "./pages/ProductShow";
 import { readProduct } from "./fetches";
@@ -20,24 +19,11 @@ const App = (props) => {
   useEffect(() => {
     readProduct().then((payload) => setProducts(payload));
   }, []);
-
-  const [orders, setorders] = useState([]);
-  useEffect(() => {
-    readOrders();
-  }, []);
-
-  const readOrders = () => {
-    fetch("/orders")
-      .then((response) => response.json())
-      .then((payload) => {
-        setorders(payload);
-      })
-      .catch((error) => console.log(error));
-  };
+ 
 
   const deleteProducts = (id) => {
     console.log("id:", id);
-    fetch(`/productsindex/${id}`, {
+    fetch(`/products/${id}`, {
       headers: {
         "Content-Type": "application/json"
       },
@@ -57,7 +43,7 @@ const App = (props) => {
         method: "DELETE"
       })
         .then((response) => response.json())
-        .then((payload) => readOrders(payload))
+        .then((payload) => payload)
         .catch((errors) => console.log("delete errors:", errors))
       }
 
@@ -85,7 +71,7 @@ const App = (props) => {
         />
         <Route
           path="/ordersprotectedindex"
-          element={<OrdersProtectedIndex orders={orders} />}
+          element={<OrdersProtectedIndex delord={deleteOrders} {...props} />}
         />
         <Route
           path="/productedit/:id"
