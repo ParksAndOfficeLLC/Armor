@@ -5,18 +5,16 @@ import { useNavigate } from "react-router-dom";
 const createOrder = async (data) => {
   try {
     const response = await fetch("/orders", {
-      body: JSON.stringify(data),
-      header: {
-        "Content-Type": "application/json",
-      },
       method: "POST",
+      headers: new Headers({
+        "Content-Type": "application/json",
+      }),
+      body: JSON.stringify(data),
     });
-
-    const payload = await response.json();
-
-    return payload;
-  } catch (errors) {
-    console.error("Order creation errors:", errors);
+    const order = await response.json();
+    return order;
+  } catch (error) {
+    console.error({ error });
   }
 };
 
@@ -33,14 +31,18 @@ const OrderNew = ({ loggedIn, currentUser }) => {
 
   const handleSubmit = async () => {
     const data = {
-      user_id: Number(newOrder.user_id),
-      product_id: Number(newOrder.product_id),
+      user_id: Number(newOrder?.user_id),
+      product_id: Number(newOrder?.product_id),
     };
 
     const response = await createOrder(data);
 
     console.log({ response });
-    // navigate("/productsindex");
+    if(response){
+      navigate("/productsindex");
+    } else {
+      alert("Please enter a valid product ID")
+    }
   };
 
   if (loggedIn) {
