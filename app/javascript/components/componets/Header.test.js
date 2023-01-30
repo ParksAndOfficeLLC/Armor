@@ -3,18 +3,19 @@
  */
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import Home from "./Home";
+import Header from "./Header";
 import { render } from "@testing-library/react";
 
-describe("<Home />", () => {
+describe("<Header />", () => {
   it("renders the home page", () => {
     const { container } = render(
       <BrowserRouter>
-        <Home logged_in={true} />
+        <Header />
       </BrowserRouter>
     );
-    expect(container.innerHTML).toContain("Welcome To Your Store");
+    expect(container.innerHTML).toContain("This is Where You Decide");
+    expect(container.innerHTML).toContain("Your Serenity");
   });
 });
 
-export default Home.test;
+export default Header.test;
