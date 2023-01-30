@@ -12,25 +12,37 @@ const readOrders = async () => {
   }
 };
 
-const OrdersProtectedIndex = ({ currentUser, delord }) => {
+const deleteOrders = async (id) => {
+  try {
+    const response = await fetch(`/orders/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "DELETE",
+    });
+    const payload = await response.json();
+
+    return payload;
+  } catch (errors) {
+    return console.log("delete errors:", errors);
+  }
+};
+
+const OrdersProtectedIndex = ({ currentUser }) => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     readOrders().then((payload) => setOrders(payload));
-  }, []);
+  }, [orders]);
 
   const current_user_orders = orders?.filter((orders) => {
-
-
     return orders.user_id === currentUser.id;
   });
-
 
   return (
     <div className="card-index">
       <h3>Your Current Order</h3>
       {current_user_orders?.map((order, index) => {
-
         return (
           <Card
             key={index}
@@ -49,9 +61,9 @@ const OrdersProtectedIndex = ({ currentUser, delord }) => {
               <NavLink to={`/productsindex`}>
                 <Button>See More Products</Button>
               </NavLink>
-              <NavLink to="/">
-                <Button onClick={() => delord(order?.id)}>Delete Order</Button>
-              </NavLink>
+                <Button onClick={() => deleteOrders(order?.id)}>
+                  Delete Order
+                </Button>
             </CardBody>
           </Card>
         );

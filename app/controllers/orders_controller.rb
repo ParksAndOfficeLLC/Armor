@@ -30,7 +30,8 @@ class OrdersController < ApplicationController
   def destroy
     p params
     @order = Order.find(params[:id])
-    if @order.destroy
+    p @order
+    if @order.delete
       render json: @order
     else
       render json: @order.errors

@@ -19,33 +19,19 @@ const App = (props) => {
   useEffect(() => {
     readProduct().then((payload) => setProducts(payload));
   }, []);
- 
 
   const deleteProducts = (id) => {
     console.log("id:", id);
     fetch(`/products/${id}`, {
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      method: "DELETE"
+      method: "DELETE",
     })
       .then((response) => response.json())
       .then((payload) => readProduct(payload))
-      .catch((errors) => console.log("delete errors:", errors))
-    }
-
-    const deleteOrders = (id) => {
-      console.log("id:", id);
-      fetch(`/orders/${id}`, {
-        headers: {
-          "Content-Type": "application/json"
-        },
-        method: "DELETE"
-      })
-        .then((response) => response.json())
-        .then((payload) => payload)
-        .catch((errors) => console.log("delete errors:", errors))
-      }
+      .catch((errors) => console.log("delete errors:", errors));
+  };
 
   return (
     <BrowserRouter>
@@ -53,17 +39,13 @@ const App = (props) => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contactus" element={<ContactUs />} />
-        <Route
-          path="/productsnew"
-          element={<ProductNew {...props} />}
-        />
-        <Route
-          path="/ordersnew"
-          element={<OrderNew {...props} />}
-        />
+        <Route path="/productsnew" element={<ProductNew {...props} />} />
+        <Route path="/ordersnew" element={<OrderNew {...props} />} />
         <Route
           path="/productsindex"
-          element={<ProductIndex products={products} deleteProducts={deleteProducts}/>}
+          element={
+            <ProductIndex products={products} deleteProducts={deleteProducts} />
+          }
         />
         <Route
           path="/productshow/:id"
@@ -71,7 +53,7 @@ const App = (props) => {
         />
         <Route
           path="/ordersprotectedindex"
-          element={<OrdersProtectedIndex delord={deleteOrders} {...props} />}
+          element={<OrdersProtectedIndex {...props} />}
         />
         <Route
           path="/productedit/:id"
