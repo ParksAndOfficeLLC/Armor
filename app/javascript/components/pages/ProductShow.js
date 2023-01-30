@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   CardTitle,
@@ -9,17 +9,20 @@ import {
   Button,
 } from "reactstrap";
 import { NavLink, useParams } from "react-router-dom";
+import { readProduct } from "../fetches";
 
-const ProductShow = ({ products }) => {
+const ProductShow = () => {
   const { id } = useParams();
-  console.log(products);
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    readProduct().then((payload) => setProducts(payload));
+  }, []);
   let currentProduct = products?.find((product) => product.id === +id);
-  console.log({ currentProduct });
+
   return (
     <div>
       {currentProduct && (
         <div className="show-background">
-
           <Card
             key={currentProduct}
             color="info"
@@ -27,10 +30,7 @@ const ProductShow = ({ products }) => {
               width: "18rem",
             }}
           >
-             <img
-                alt="Sample"
-                src="https://picsum.photos/300/200"
-              />
+            <img alt="Sample" src="https://picsum.photos/300/200" />
             <CardBody>
               <CardTitle tag="h5">
                 {currentProduct.name}, {currentProduct.price},{" "}
@@ -61,9 +61,9 @@ const ProductShow = ({ products }) => {
               </NavLink>
             </CardBody>
           </Card>
-          </div>
+        </div>
         // {/* );
-       )}
+      )}
     </div>
   );
 };

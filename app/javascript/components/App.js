@@ -44,7 +44,7 @@ const App = (props) => {
         <Route
           path="/productsindex"
           element={
-            <ProductIndex products={products} deleteProducts={deleteProducts} />
+            <ProductIndex products={products} deleteProducts={deleteProducts} {...props} />
           }
         />
         <Route
@@ -57,7 +57,7 @@ const App = (props) => {
         />
         <Route
           path="/productedit/:id"
-          element={<ProductEdit products={products} />}
+          element={<ProductEdit products={products} {...props}/>}
         />
       </Routes>
       <Footer />

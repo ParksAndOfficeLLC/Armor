@@ -18,10 +18,6 @@ const ProductIndex = ({deleteProducts}) => {
     readProduct().then((payload) => setProducts(payload));
   }, []);
 
-  const deleteProd = (id) => {
-    deleteProducts(id)
-  }
-
   return (
     <>
       <h3>All Products</h3>
@@ -66,10 +62,10 @@ const ProductIndex = ({deleteProducts}) => {
               <NavLink to={`/productedit/${product.id}`} className="nav-link">
                 <Button>Edit Product</Button>
               </NavLink>
-              <NavLink to={`/productedit/${product.id}`} className="nav-link">
-                <Button onClick={
-                  () => deleteProd(product?.id)}>Delete Product</Button>
-              </NavLink>
+                <Button onClick={async () => { await deleteProducts(product?.id)
+                readProduct().then((payload) => setProducts(payload));
+                return;
+                }}>Delete Product</Button>
             </CardBody>
           </Card>
         );
