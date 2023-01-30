@@ -22,11 +22,11 @@ class OrdersController < ApplicationController
         # p orders_params
         @orders.update(orders_params)
         # p @orders
-        # if @orders.valid?
+        if @orders.valid?
             render json: @orders
-        # else
-        #     render json: @orders.errors, status: 422
-        # end
+        else
+            render json: @orders.errors, status: 422
+        end
     end
 
     def destroy

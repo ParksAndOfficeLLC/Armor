@@ -81,6 +81,7 @@ GEM
       popper_js (>= 2.11.6, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
+    byebug (9.1.0)
     concurrent-ruby (1.1.10)
     connection_pool (2.3.0)
     crass (1.0.6)
@@ -258,6 +259,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap (~> 5.2)
+  byebug (~> 9.0, >= 9.0.5)
   debug
   devise (~> 4.8)
   importmap-rails

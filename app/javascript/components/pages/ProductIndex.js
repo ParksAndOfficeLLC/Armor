@@ -29,11 +29,16 @@ const ProductIndex = () => {
         return (
           <Card
             key={index}
+            color="warning"
+            outline
             style={{
               width: "18rem",
             }}
           >
-            {/* <img alt="Card" src={product.image} /> */}
+             <img
+                alt="Sample"
+                src="https://picsum.photos/300/200"
+              />
             <CardBody>
               <CardTitle tag="h5">
                 {product.name}, {product.price}, {product.cost}

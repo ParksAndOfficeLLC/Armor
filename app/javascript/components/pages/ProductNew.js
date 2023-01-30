@@ -1,16 +1,11 @@
 import { Formik, Form, Field } from "formik";
 import React, { useState } from "react";
-import {
-  FormGroup,
-  Label,
-  Input,
-} from "reactstrap";
+import { FormGroup, Label, Input } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 
-
-const ProductNew = ({ createProduct, loggedIn }) => {
+const ProductNew = ({ createProduct, loggedIn, ...props }) => {
   const navigate = useNavigate();
-
+    console.log({props})
   //with formik you wouldn't need this
   const [newProduct, setNewProduct] = useState({
     name: "",
@@ -35,35 +30,43 @@ const ProductNew = ({ createProduct, loggedIn }) => {
     return (
       <Formik
         initialValues={{
-          email: "",
+          name: "",
           price: "",
           cost: "",
+          user_id: props.currentUser.id,
         }}
         onSubmit={async (values) => {
-          createProduct(newProduct);
+          console.log({values})
+          const response = await createProduct(values);
+          console.log({response})
           navigate("/productsindex");
-          //this runs the submit function 
-          await new Promise((r) => setTimeout(r, 500)); //this is just to simulate a delay
-          alert(JSON.stringify(values, null, 2)); //this is just to show the values in an alert message
+          
         }}
       >
         <Form className="submitForm">
           <FormGroup>
             <Label for="name">Name</Label>
-            <Field
-              id="firstName"
-              name="Name"
-              placeholder="Name"
-              as={Input}
-            />
+            <Field id="name" name="name" placeholder="Name" as={Input} />
 
             {/* Formik's uses the name of the Label in this case for="price" */}
             <Label for="price">Price</Label>
             {/* Associastes the name ^ in the for="<here>" with the id="price", uses that to handle changing state. */}
-            <Field type="float" name="price" id="price"  placeholder="Price" as={Input} />
+            <Field
+              type="float"
+              name="price"
+              id="price"
+              placeholder="Price"
+              as={Input}
+            />
 
             <Label for="cost">Wholesale Price</Label>
-            <Field type="float" name="cost" id="cost"  placeholder="Cost" as={Input} />
+            <Field
+              type="float"
+              name="cost"
+              id="cost"
+              placeholder="Cost"
+              as={Input}
+            />
 
             {/* formik handles the handleSubmit; calls onSubmit, you can use css to style this button
 
@@ -71,9 +74,7 @@ const ProductNew = ({ createProduct, loggedIn }) => {
 
                 You would have to pull handleSubmit from formik and use that to call OnSubmit; if you look at the formik docs, you can see how to do that.
              */}
-            <button type="submit">
-              Submit New Product
-            </button>
+            <button type="submit">Submit New Product</button>
           </FormGroup>
         </Form>
       </Formik>
@@ -83,4 +84,4 @@ const ProductNew = ({ createProduct, loggedIn }) => {
   }
 };
 
-export default ProductNew
+export default ProductNew;
