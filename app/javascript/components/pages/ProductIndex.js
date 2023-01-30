@@ -11,16 +11,12 @@ import {
 import { NavLink } from "react-router-dom";
 import { readProduct } from "../fetches";
 
-const ProductIndex = () => {
+const ProductIndex = ({deleteProducts}) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     readProduct().then((payload) => setProducts(payload));
   }, []);
-
-  const deleteProd = (id) => {
-    deleteProduct(id)
-  }
 
   return (
     <>
@@ -29,11 +25,16 @@ const ProductIndex = () => {
         return (
           <Card
             key={index}
+            color="warning"
+            outline
             style={{
               width: "18rem",
             }}
           >
-            {/* <img alt="Card" src={product.image} /> */}
+             <img
+                alt="Sample"
+                src="https://picsum.photos/300/200"
+              />
             <CardBody>
               <CardTitle tag="h5">
                 {product.name}, {product.price}, {product.cost}
@@ -61,10 +62,10 @@ const ProductIndex = () => {
               <NavLink to={`/productedit/${product.id}`} className="nav-link">
                 <Button>Edit Product</Button>
               </NavLink>
-              <NavLink to={`/productedit/${product.id}`} className="nav-link">
-                <Button onClick={
-                  () => deleteProd(product?.id)}>Delete Product</Button>
-              </NavLink>
+                <Button onClick={async () => { await deleteProducts(product?.id)
+                readProduct().then((payload) => setProducts(payload));
+                return;
+                }}>Delete Product</Button>
             </CardBody>
           </Card>
         );

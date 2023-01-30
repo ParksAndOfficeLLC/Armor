@@ -19,6 +19,7 @@
     "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
+    "eslint": "^8.33.0",
     "jest-environment-jsdom": "^29.4.1",
     "webpack-dev-server": "^3"
   }

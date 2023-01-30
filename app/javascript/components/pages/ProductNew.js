@@ -1,86 +1,83 @@
 import { Formik, Form, Field } from "formik";
-import React, { useState } from "react";
-import {
-  FormGroup,
-  Label,
-  Input,
-} from "reactstrap";
+import React from "react";
+import { FormGroup, Label, Input } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 
+const createProduct = async (data) => {
+  try {
+    const response = await fetch("/products", {
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
 
-const ProductNew = ({ createProduct, logged_in }) => {
+    const payload = response.json();
+
+    return payload;
+  } catch (error) {
+    console.error({ error });
+  }
+};
+
+const ProductNew = ({ loggedIn, ...props }) => {
   const navigate = useNavigate();
 
-  //with formik you wouldn't need this
-  const [newProduct, setNewProduct] = useState({
-    name: "",
-    price: "",
-    cost: "",
-    user_id: "",
-    order_id: "",
-  });
-
-  //with formik you wouldn't need this
-  const handleChange = (e) => {
-    setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
-  };
-
-  //with formik you could call this onSubmit - or move the inside of this function to the onSubmit function in the Formik onSubmit
-  // const handleSubmit = () => {
-  //   createProduct(newProduct);
-  //   navigate("/productindex");
-  // };
-
-  // if (logged_in) {
+  if (loggedIn) {
     return (
       <Formik
         initialValues={{
-          email: "",
+          name: "",
           price: "",
           cost: "",
+          user_id: props.currentUser.id,
         }}
         onSubmit={async (values) => {
-          createProduct(newProduct);
-          navigate("/productsindex");
-          //this runs the submit function 
-          await new Promise((r) => setTimeout(r, 500)); //this is just to simulate a delay
-          alert(JSON.stringify(values, null, 2)); //this is just to show the values in an alert message
+          const data = {
+            name: values.name,
+            price: parseInt(values.price),
+            cost: parseInt(values.cost),
+            user_id: Number(values.user_id),
+          };
+          const response = await createProduct(data);
+          if (response) {
+            navigate("/productsindex");
+          } else {
+            alert("Something went wrong...");
+          }
         }}
       >
         <Form className="submitForm">
           <FormGroup>
             <Label for="name">Name</Label>
+            <Field id="name" name="name" placeholder="Name" as={Input} />
+
+            <Label for="price">Price</Label>
             <Field
-              id="firstName"
-              name="firstName"
-              placeholder="Jane"
+              type="float"
+              name="price"
+              id="price"
+              placeholder="Price"
               as={Input}
             />
 
-            {/* Formik's uses the name of the Label in this case for="price" */}
-            <Label for="price">Price</Label>
-            {/* Associastes the name ^ in the for="<here>" with the id="price", uses that to handle changing state. */}
-            <Field type="float" name="price" id="price" as={Input} />
-
             <Label for="cost">Wholesale Price</Label>
-            <Field type="float" name="cost" id="cost" as={Input} />
-
-            {/* formik handles the handleSubmit; calls onSubmit, you can use css to style this button
-
-                if you want to use the Reactstrap Button component, you can still, but there's an extra step to get the handleSubmit to work.
-
-                You would have to pull handleSubmit from formik and use that to call OnSubmit; if you look at the formik docs, you can see how to do that.
-             */}
-            <button type="submit">
-              Submit New Product
-            </button>
+            <Field
+              type="float"
+              name="cost"
+              id="cost"
+              placeholder="Cost"
+              as={Input}
+            />
+            <button type="submit">Submit New Product</button>
           </FormGroup>
         </Form>
       </Formik>
     );
-//   } else {
-//     return <h1>Please sign in to add new products</h1>;
-//   }
+  } else {
+    return <h1>Please sign in to add new products</h1>;
+  }
 };
 
-export default ProductNew
+export default ProductNew;

@@ -2,10 +2,26 @@ import React, { useState } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 
-const OrderNew = ({ createOrder, loggedIn, currentUser }) => {
+const createOrder = async (data) => {
+  try {
+    const response = await fetch("/orders", {
+      method: "POST",
+      headers: new Headers({
+        "Content-Type": "application/json",
+      }),
+      body: JSON.stringify(data),
+    });
+    const order = await response.json();
+    return order;
+  } catch (error) {
+    console.error({ error });
+  }
+};
+
+const OrderNew = ({ loggedIn, currentUser }) => {
   const navigate = useNavigate();
   const [newOrder, setNewOrder] = useState({
-    user_id: "",
+    user_id: currentUser?.id,
     product_id: "",
   });
 
@@ -13,9 +29,20 @@ const OrderNew = ({ createOrder, loggedIn, currentUser }) => {
     setNewOrder({ ...newOrder, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = () => {
-    createOrder(newOrder);
-    navigate("/productsindex");
+  const handleSubmit = async () => {
+    const data = {
+      user_id: Number(newOrder?.user_id),
+      product_id: Number(newOrder?.product_id),
+    };
+
+    const response = await createOrder(data);
+
+    console.log({ response });
+    if(response){
+      navigate("/productsindex");
+    } else {
+      alert("Please enter a valid product ID")
+    }
   };
 
   if (loggedIn) {
@@ -27,7 +54,7 @@ const OrderNew = ({ createOrder, loggedIn, currentUser }) => {
             type="integer"
             name="product_id"
             onChange={handleChange}
-            value={newOrder.product_id}
+            value={newOrder?.product_id}
           />
         </FormGroup>
         <Button onClick={handleSubmit} name="submit">

@@ -1,16 +1,14 @@
-import React from 'react'
-import Navigation from './Navigation'
+import React from "react";
+import Navigation from "./Navigation";
 
 const Header = () => {
   return (
     <div>
-        <Navigation />
-        <h1>Welcome To My Swamp</h1>
-        <h2>Shrek is Love, Shrek is life</h2>
-
-
+      <Navigation />
+      <h1>This is Where You Decide</h1>
+      <h2>Your Serenity</h2>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
