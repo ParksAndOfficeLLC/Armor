@@ -35,19 +35,6 @@ const App = (props) => {
       .catch((error) => console.log(error));
   };
 
-  const createOrder = (order) => {
-    fetch("/orders", {
-      body: JSON.stringify(order),
-      header: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    })
-      .then((response) => response.json())
-      .then((payload) => readOrders())
-      .catch((errors) => console.log("Order creation errors:", errors));
-  };
-
   const deleteProducts = (id) => {
     console.log("id:", id);
     fetch(`/productsindex/${id}`, {
@@ -86,9 +73,8 @@ const App = (props) => {
         />
         <Route
           path="/ordersnew"
-          element={<OrderNew createOrder={createOrder} {...props} />}
+          element={<OrderNew {...props} />}
         />
-        <Route path="/orders" element={<Orders /> deleteOrders={deleteOrders}} />
         <Route
           path="/productsindex"
           element={<ProductIndex products={products} deleteProducts={deleteProducts}/>}

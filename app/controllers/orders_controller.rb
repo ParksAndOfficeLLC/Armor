@@ -1,14 +1,15 @@
 class OrdersController < ApplicationController
   def index
-    orders = Order.all
-    render json: orders
+    @orders = Order.all
+    render json: @orders
   end
 
   def create
-    @orders = Order.new(user_id: params[:user_id], product_id: params[:product_id])
-    if orders.valid?
-      render json: orders
+    order = Order.create(product_id: params[:product_id], user_id: params[:user_id])
+    if order.valid?
+      render json: order
     else
+      p order.errors
       render json: order.errors, status: 422
     end
   end
@@ -35,6 +36,6 @@ class OrdersController < ApplicationController
   private
 
   def orders_params
-    params.require(:order).permit(:product_id)
+    params.permit(:product_id, :user_id)
   end
 end
