@@ -21,43 +21,6 @@ const App = (props) => {
     readProduct().then((payload) => setProducts(payload));
   }, []);
 
-  const createProduct = (product) => {
-    return fetch("/products", {
-      body: JSON.stringify(product),
-      header: {
-        "Content-Type": "application/json"
-      },
-      method: "POST"
-    })
-      .then((response) => response.json())
-      .then((payload) => {
-        console.log({payload})
-        return payload
-      })
-      .catch((errors) => console.log("Product creation errors:", errors));
-  };
-//   const createProduct = async (product) => {
-//     try {
-//       const response = await fetch("/products", {
-//       body: JSON.stringify(product),
-//       header: {
-//         "Content-Type": "application/json"
-//       },
-//       method: "POST"
-//     });
-//     const payload = await response.json();
-//     return payload;
-//   } catch (errors) {
-//     return console.log("Product update errors:", errors);
-//   }
-// };
-//   //     .then((response) => response.json())
-//   //     .then((payload) => payload)
-//   //  } .catch((errors) => console.log("Product creation errors:", errors));
-//   //     console.log({product})
-//   //     console.log({payload})
-//   // };
-
   const [orders, setorders] = useState([]);
   useEffect(() => {
     readOrders();
@@ -119,7 +82,7 @@ const App = (props) => {
         <Route path="/contactus" element={<ContactUs />} />
         <Route
           path="/productsnew"
-          element={<ProductNew createProduct={createProduct} {...props} />}
+          element={<ProductNew {...props} />}
         />
         <Route
           path="/ordersnew"

@@ -1,30 +1,28 @@
 import { Formik, Form, Field } from "formik";
-import React, { useState } from "react";
+import React from "react";
 import { FormGroup, Label, Input } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 
-const ProductNew = ({ createProduct, loggedIn, ...props }) => {
+const createProduct = async (data) => {
+  try {
+    const response = await fetch("/products", {
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+
+    const payload = response.json();
+
+    return payload;
+  } catch (error) {
+    console.error({ error });
+  }
+};
+
+const ProductNew = ({ loggedIn, ...props }) => {
   const navigate = useNavigate();
-    console.log({props})
-  //with formik you wouldn't need this
-  const [newProduct, setNewProduct] = useState({
-    name: "",
-    price: "",
-    cost: "",
-    user_id: "",
-    order_id: "",
-  });
-
-  //with formik you wouldn't need this
-  const handleChange = (e) => {
-    setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
-  };
-
-  //with formik you could call this onSubmit - or move the inside of this function to the onSubmit function in the Formik onSubmit
-  // const handleSubmit = () => {
-  //   createProduct(newProduct);
-  //   navigate("/productindex");
-  // };
 
   if (loggedIn) {
     return (
@@ -36,11 +34,18 @@ const ProductNew = ({ createProduct, loggedIn, ...props }) => {
           user_id: props.currentUser.id,
         }}
         onSubmit={async (values) => {
-          console.log({values})
-          const response = await createProduct(values);
-          console.log({response})
-          navigate("/productsindex");
-          
+          const data = {
+            name: values.name,
+            price: parseInt(values.price),
+            cost: parseInt(values.cost),
+            user_id: Number(values.user_id),
+          };
+          const response = await createProduct(data);
+          if (response) {
+            navigate("/productsindex");
+          } else {
+            alert("Something went wrong...");
+          }
         }}
       >
         <Form className="submitForm">
@@ -48,9 +53,7 @@ const ProductNew = ({ createProduct, loggedIn, ...props }) => {
             <Label for="name">Name</Label>
             <Field id="name" name="name" placeholder="Name" as={Input} />
 
-            {/* Formik's uses the name of the Label in this case for="price" */}
             <Label for="price">Price</Label>
-            {/* Associastes the name ^ in the for="<here>" with the id="price", uses that to handle changing state. */}
             <Field
               type="float"
               name="price"
@@ -67,13 +70,6 @@ const ProductNew = ({ createProduct, loggedIn, ...props }) => {
               placeholder="Cost"
               as={Input}
             />
-
-            {/* formik handles the handleSubmit; calls onSubmit, you can use css to style this button
-
-                if you want to use the Reactstrap Button component, you can still, but there's an extra step to get the handleSubmit to work.
-
-                You would have to pull handleSubmit from formik and use that to call OnSubmit; if you look at the formik docs, you can see how to do that.
-             */}
             <button type="submit">Submit New Product</button>
           </FormGroup>
         </Form>
