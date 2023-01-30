@@ -12,6 +12,7 @@ import Header from "./componets/Header";
 import OrdersProtectedIndex from "./pages/OrdersProtectedIndex";
 import ProductShow from "./pages/ProductShow";
 import { readProduct } from "./fetches";
+import About from "./pages/About";
 
 const App = (props) => {
   const [products, setProducts] = useState([]);
@@ -59,6 +60,7 @@ const App = (props) => {
           path="/productedit/:id"
           element={<ProductEdit products={products} {...props}/>}
         />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </BrowserRouter>

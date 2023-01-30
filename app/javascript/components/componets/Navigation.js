@@ -22,6 +22,9 @@ const Navigation = () => {
             <a href="/users/sign_in">Login</a>
           </li>
           <li>
+            <a href="/users/sign_out">Log Out</a>
+          </li>
+          <li>
             <NavLink to="/productsindex">Products</NavLink>
           </li>
           <li>
