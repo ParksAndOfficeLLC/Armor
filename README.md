@@ -2,17 +2,23 @@ Welcome to Armor!
 
 Armor is a cutting-edge e-commerce solution empowering individuals and businesses to effortlessly establish and manage their online stores. With a focus on user-friendliness and accessibility, Armor enables anyone to effortlessly create, manage and sell their products with ease. 
 
-Features:
+Features: 
 
-Create your products
-Give them a name
+In This appliocation you can, 
+
+Create products
+Edit Produts 
+Update Products 
+Acess inventory 
+Edit and Update inventroy 
+View Your Orders 
 
 Lets Get Started 
 
 Running this project.....
 Below documentation were the steps taken to get the
 application up and running.
-*****************************
+*******************************************************
 
 *******************************************************
  3048  rails new store -d postgresql -T
@@ -40,7 +46,10 @@ application up and running.
  3077  rails s
 ************************************************************************************
 
-Understanding In app/models/associations
+Understanding Aassociations
+
+************************************************************************************
+ 
  Users 
  has_many :products, through: :orders
  has_many :orders
